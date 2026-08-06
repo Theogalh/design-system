@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="The dot" subtitle="Signature motif: identity, state, position" viewport="940x640" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The dot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .demo-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .demo-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); width: 150px; flex: none; }
+  .marks { display: flex; gap: 36px; flex-wrap: wrap; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · foundations</p>
+  <h1 class="display">The dot</h1>
+  <p class="sub">Every product signs its name with a periwinkle dot. The dot is the system's atom: it marks identity, state, and position — never decoration.</p>
+
+  <hr class="hairline" />
+
+  <div class="demo-row">
+    <span class="demo-label">Wordmarks</span>
+    <div class="marks">
+      <span class="wordmark">theoapi<span class="dot"></span></span>
+      <span class="wordmark">ytp<span class="dot"></span></span>
+      <span class="wordmark">screen<span class="dot"></span></span>
+    </div>
+  </div>
+
+  <div class="demo-row">
+    <span class="demo-label">State</span>
+    <span class="stamp ok">Verified</span>
+    <span class="stamp warn">Unverified</span>
+    <span class="stamp danger">Deleted</span>
+    <span class="stamp">Inactive</span>
+  </div>
+
+  <div class="demo-row">
+    <span class="demo-label">Position</span>
+    <nav class="nav" style="gap:8px">
+      <a href="#" class="active">Apps</a>
+      <a href="#">Profile</a>
+    </nav>
+    <span class="muted">The active nav item carries the dot.</span>
+  </div>
+
+  <div class="demo-row">
+    <span class="demo-label">Working</span>
+    <span style="display:inline-flex;align-items:center;gap:9px"><span class="dot pulse"></span><span class="muted">Analyse en cours…</span></span>
+    <span class="muted">A pulsing dot is the only loading indicator. Motion stops with <span class="mono" style="font-size:12px">prefers-reduced-motion</span>.</span>
+  </div>
+
+  <div class="demo-row" style="border-bottom:none">
+    <span class="demo-label">Rules</span>
+    <div class="muted" style="max-width:520px">
+      One dot per context. The dot never appears next to another accent element, never becomes an icon, and never changes size within a component. If everything is marked, nothing is.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

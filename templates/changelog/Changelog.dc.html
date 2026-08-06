@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Changelog" description="Release notes : versions en plates, tags added/fixed/breaking" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div>
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav"><a href="#">Docs</a><a href="#" class="active">Changelog</a></nav>
+</header>
+<main style="max-width:720px;margin:0 auto;padding:48px 40px 60px">
+  <div class="page-head anim-rise">
+    <p class="eyebrow">theoapi · changelog</p>
+    <h1 class="display">What changed</h1>
+    <p class="sub">Every release, honestly described. Breaking changes always on top.</p>
+  </div>
+  <div style="display:grid;gap:28px">
+    <section>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+        <span class="plate">v1.4.0</span>
+        <span class="muted" style="font-family:var(--font-mono);font-size:12px">2026-08-02</span>
+      </div>
+      <div class="panel" style="display:grid;gap:12px">
+        <div style="display:flex;gap:12px;align-items:baseline"><span class="stamp danger" style="flex:none">breaking</span><span style="font-size:14px"><span class="mono">quality: "hd"</span> removed — use <span class="mono">"1080p"</span> or <span class="mono">"best"</span>.</span></div>
+        <div style="display:flex;gap:12px;align-items:baseline"><span class="stamp ok" style="flex:none">added</span><span style="font-size:14px">Webhooks on job completion (<span class="mono">webhook_url</span> on analyze).</span></div>
+        <div style="display:flex;gap:12px;align-items:baseline"><span class="stamp ok" style="flex:none">added</span><span style="font-size:14px">Audio-only extraction (<span class="mono">quality: "audio"</span>).</span></div>
+        <div style="display:flex;gap:12px;align-items:baseline"><span class="stamp warn" style="flex:none">fixed</span><span style="font-size:14px">Jobs no longer stall when a segment times out twice.</span></div>
+      </div>
+    </section>
+    <section>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+        <span class="plate">v1.3.2</span>
+        <span class="muted" style="font-family:var(--font-mono);font-size:12px">2026-07-11</span>
+      </div>
+      <div class="panel" style="display:grid;gap:12px">
+        <div style="display:flex;gap:12px;align-items:baseline"><span class="stamp warn" style="flex:none">fixed</span><span style="font-size:14px">Rate-limit headers now present on every 429.</span></div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="footer">theoapi · subscribe by <a href="#">RSS</a></footer>
+</div>
+</x-dc>
+</body>
+</html>

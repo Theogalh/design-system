@@ -1,0 +1,133 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Admin — Users" subtitle="Master-detail, app roles, danger zone" viewport="1360x950" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TheoAPI — Admin · Users</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="#">theoapi<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#">Apps</a>
+    <a href="#" class="active">Admin</a>
+    <a href="#">Profile</a>
+    <button class="logout">Logout</button>
+  </nav>
+</header>
+<div class="admin-wrap">
+  <a class="admin-back" href="#">← Back to app</a>
+  <div class="admin-layout">
+    <nav class="rail">
+      <div class="rail-group">
+        <span class="rail-title">Registry</span>
+        <a href="#">Apps</a>
+        <a href="#">Roles</a>
+        <a href="#" class="active">Users</a>
+        <a href="#">Audit</a>
+      </div>
+    </nav>
+    <div>
+      <div class="page-head">
+        <h1 class="display">Users</h1>
+        <p class="sub">Review accounts, assign roles, and manage access.</p>
+      </div>
+      <div class="split">
+        <div class="row-list">
+          <button class="row-card active">
+            <span class="avatar">T</span>
+            <span class="row-main">
+              <span class="row-title">theogalh</span><br />
+              <span class="row-sub">theogalh.dev@gmail.com</span>
+            </span>
+          </button>
+          <button class="row-card">
+            <span class="avatar">M</span>
+            <span class="row-main">
+              <span class="row-title">marie</span><br />
+              <span class="row-sub">marie@example.com</span>
+            </span>
+          </button>
+          <button class="row-card">
+            <span class="avatar">L</span>
+            <span class="row-main">
+              <span class="row-title">lucas</span><br />
+              <span class="row-sub">lucas@example.com</span>
+            </span>
+          </button>
+        </div>
+        <div class="panel">
+          <div class="section">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+              <div>
+                <h2 class="section-title" style="font-family:var(--font-display);font-size:20px;margin-bottom:4px">theogalh</h2>
+                <span class="plate">user:8f3d21c7-4b0e</span>
+              </div>
+              <span class="stamp ok">Verified</span>
+            </div>
+            <div class="meta-grid" style="margin-top:18px;grid-template-columns:1fr 1fr">
+              <div class="meta-row"><span class="meta-label">Email</span><span class="meta-value">theogalh.dev@gmail.com</span></div>
+              <div class="meta-row"><span class="meta-label">Username</span><span class="meta-value">theogalh</span></div>
+              <div class="meta-row"><span class="meta-label">Platform role</span><span class="meta-value">super_admin</span></div>
+              <div class="meta-row"><span class="meta-label">Created</span><span class="meta-value">2025-11-02</span></div>
+            </div>
+          </div>
+
+          <hr class="hairline" />
+
+          <div class="section">
+            <p class="eyebrow">App roles</p>
+            <div class="row-list">
+              <div class="row-card" style="cursor:default">
+                <span class="applogo">J</span>
+                <span class="row-main">
+                  <span class="row-title">media_admin</span><br />
+                  <span class="row-sub">jellyfin</span>
+                </span>
+                <button class="btn btn-ghost btn-sm">Revoke</button>
+              </div>
+              <div class="row-card" style="cursor:default">
+                <span class="applogo">Y</span>
+                <span class="row-main">
+                  <span class="row-title">downloader</span><br />
+                  <span class="row-sub">ytp</span>
+                </span>
+                <button class="btn btn-ghost btn-sm">Revoke</button>
+              </div>
+            </div>
+            <div class="form" style="grid-template-columns:1fr 1fr auto;align-items:end;margin-top:14px">
+              <div class="field">
+                <label class="field-label" for="au-app">App</label>
+                <select id="au-app"><option>jellyfin</option></select>
+              </div>
+              <div class="field">
+                <label class="field-label" for="au-role">Role</label>
+                <select id="au-role"><option>media_admin</option></select>
+              </div>
+              <button class="btn btn-primary">Assign role</button>
+            </div>
+          </div>
+
+          <hr class="hairline" />
+
+          <div class="section">
+            <p class="eyebrow" style="color:var(--bad)">Danger zone</p>
+            <div class="action-row">
+              <button class="btn btn-ghost">Force password reset</button>
+              <button class="btn btn-danger">Delete account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

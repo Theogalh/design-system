@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Admin — Audit" subtitle="Filterable mono ledger" viewport="1360x750" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TheoAPI — Admin · Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="#">theoapi<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#">Apps</a>
+    <a href="#" class="active">Admin</a>
+    <a href="#">Profile</a>
+    <button class="logout">Logout</button>
+  </nav>
+</header>
+<div class="admin-wrap">
+  <a class="admin-back" href="#">← Back to app</a>
+  <div class="admin-layout">
+    <nav class="rail">
+      <div class="rail-group">
+        <span class="rail-title">Registry</span>
+        <a href="#">Apps</a>
+        <a href="#">Roles</a>
+        <a href="#">Users</a>
+        <a href="#" class="active">Audit</a>
+      </div>
+    </nav>
+    <div>
+      <div class="page-head">
+        <h1 class="display">Audit</h1>
+        <p class="sub">Every admin action, recorded as it happened.</p>
+      </div>
+      <div class="action-row" style="margin-bottom:18px">
+        <div class="field" style="width:200px">
+          <label class="field-label" for="ad-app">App</label>
+          <select id="ad-app"><option>All apps</option><option>jellyfin</option><option>ytp</option></select>
+        </div>
+        <div class="field" style="width:260px">
+          <label class="field-label" for="ad-q">Action</label>
+          <input id="ad-q" placeholder="role.assign, user.delete…" />
+        </div>
+      </div>
+      <div class="panel" style="padding:8px 16px">
+        <table class="ledger">
+          <thead>
+            <tr><th>Time</th><th>Actor</th><th>Action</th><th>Target</th><th>App</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="t">2026-08-06 14:02</td><td>theogalh</td><td>role.assign</td><td>marie → media_admin</td><td>jellyfin</td></tr>
+            <tr><td class="t">2026-08-06 13:47</td><td>theogalh</td><td>oauth.client.create</td><td>client_1yq9…d41f</td><td>ytp</td></tr>
+            <tr><td class="t">2026-08-06 11:20</td><td>system</td><td>user.force_reset</td><td>user:2c11…9a04</td><td>platform</td></tr>
+            <tr><td class="t">2026-08-05 22:14</td><td>theogalh</td><td>app.update</td><td>app:screen</td><td>screen</td></tr>
+            <tr><td class="t">2026-08-05 21:03</td><td>theogalh</td><td>role.revoke</td><td>lucas → downloader</td><td>ytp</td></tr>
+            <tr><td class="t">2026-08-05 18:40</td><td>marie</td><td>oauth.redirect.add</td><td>https://jellyfin…/callback</td><td>jellyfin</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

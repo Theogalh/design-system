@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Colors" subtitle="Ground, content, periwinkle accent, signals" viewport="940x1150" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .sw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .sw { border: 1px solid var(--line-soft); border-radius: var(--r-md); overflow: hidden; }
+  .sw .patch { height: 64px; }
+  .sw .info { padding: 10px 12px; background: var(--panel); display: grid; gap: 2px; }
+  .sw .name { font-weight: 600; font-size: 13px; }
+  .sw .hex { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); }
+  .sw .use { font-size: 12px; color: var(--faint); }
+  .pair { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .pair .demo { border-radius: var(--r-md); padding: 12px 18px; font-weight: 600; font-size: 14px; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · foundations</p>
+  <h1 class="display">Colors</h1>
+  <p class="sub">One near-black ground, one periwinkle accent, three signals. Nothing else.</p>
+
+  <hr class="hairline" />
+
+  <div class="section">
+    <h2 class="section-title">Ground</h2>
+    <div class="sw-grid">
+      <div class="sw"><div class="patch" style="background:#0b0c10"></div><div class="info"><span class="name">Ink</span><span class="hex">#0B0C10</span><span class="use">Page background</span></div></div>
+      <div class="sw"><div class="patch" style="background:#14161d"></div><div class="info"><span class="name">Panel</span><span class="hex">#14161D</span><span class="use">Cards, rows, rails</span></div></div>
+      <div class="sw"><div class="patch" style="background:#1a1d27"></div><div class="info"><span class="name">Panel 2</span><span class="hex">#1A1D27</span><span class="use">Hover, nested surfaces</span></div></div>
+      <div class="sw"><div class="patch" style="background:#262b37"></div><div class="info"><span class="name">Line</span><span class="hex">#262B37</span><span class="use">Borders, inputs</span></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Content</h2>
+    <div class="sw-grid">
+      <div class="sw"><div class="patch" style="background:#edeef3"></div><div class="info"><span class="name">Text</span><span class="hex">#EDEEF3</span><span class="use">Primary text</span></div></div>
+      <div class="sw"><div class="patch" style="background:#8d93a5"></div><div class="info"><span class="name">Muted</span><span class="hex">#8D93A5</span><span class="use">Secondary text</span></div></div>
+      <div class="sw"><div class="patch" style="background:#5c6272"></div><div class="info"><span class="name">Faint</span><span class="hex">#5C6272</span><span class="use">Labels, placeholders</span></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Accent — periwinkle</h2>
+    <div class="sw-grid">
+      <div class="sw"><div class="patch" style="background:#8b93f8"></div><div class="info"><span class="name">Peri</span><span class="hex">#8B93F8</span><span class="use">The dot, links, focus</span></div></div>
+      <div class="sw"><div class="patch" style="background:#a7adff"></div><div class="info"><span class="name">Peri high</span><span class="hex">#A7ADFF</span><span class="use">Hover text</span></div></div>
+      <div class="sw"><div class="patch" style="background:#6a72f2"></div><div class="info"><span class="name">Peri button</span><span class="hex">#6A72F2</span><span class="use">Filled buttons</span></div></div>
+    </div>
+    <div class="pair">
+      <span class="demo" style="background:#6a72f2;color:#fff">Button text on Peri button</span>
+      <span class="demo" style="background:#0b0c10;color:#8b93f8;border:1px solid #262b37">Peri text on Ink</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Signals</h2>
+    <div class="sw-grid">
+      <div class="sw"><div class="patch" style="background:#5bc99b"></div><div class="info"><span class="name">Ok</span><span class="hex">#5BC99B</span><span class="use">Verified, active, success</span></div></div>
+      <div class="sw"><div class="patch" style="background:#e5c558"></div><div class="info"><span class="name">Warn</span><span class="hex">#E5C558</span><span class="use">Unverified, pending</span></div></div>
+      <div class="sw"><div class="patch" style="background:#f07567"></div><div class="info"><span class="name">Bad</span><span class="hex">#F07567</span><span class="use">Errors, destructive</span></div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

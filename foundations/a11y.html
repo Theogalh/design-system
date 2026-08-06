@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Accessibility" subtitle="Contraste, focus, cibles, reduced motion" viewport="940x880" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessibility</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+  .pair-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .pair-cell { border: 1px solid var(--line-soft); border-radius: var(--r-md); padding: 14px; display: grid; gap: 4px; }
+  .pair-cell .ratio { font-family: var(--font-mono); font-size: 11px; color: var(--faint); }
+  .focus-demo .btn { outline: 2px solid var(--peri); outline-offset: 2px; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · foundations</p>
+  <h1 class="display">Accessibility</h1>
+  <p class="sub">Sombre ne veut pas dire illisible. Chaque paire texte/fond passe WCAG AA.</p>
+  <hr class="hairline" />
+  <div class="block">
+    <h2 class="section-title">Contraste — paires validées</h2>
+    <div class="pair-grid">
+      <div class="pair-cell"><span style="color:var(--text)">Text sur Ink</span><span class="ratio">#EDEEF3 / #0B0C10 — 17.2:1 AAA</span></div>
+      <div class="pair-cell"><span style="color:var(--muted)">Muted sur Ink</span><span class="ratio">#8D93A5 / #0B0C10 — 6.9:1 AA</span></div>
+      <div class="pair-cell"><span style="color:var(--faint)">Faint sur Ink</span><span class="ratio">#767D90 / #0B0C10 — 4.8:1 AA</span></div>
+      <div class="pair-cell"><span style="color:var(--peri-hi)">Peri high sur Ink</span><span class="ratio">#A7ADFF / #0B0C10 — 8.8:1 AAA</span></div>
+      <div class="pair-cell" style="background:var(--peri-btn);border-color:var(--peri-btn)"><span style="color:#fff">White sur Peri button</span><span class="ratio" style="color:rgba(255,255,255,0.75)">#FFF / #6A72F2 — 4.6:1 AA</span></div>
+      <div class="pair-cell"><span style="color:var(--bad)">Bad sur Ink</span><span class="ratio">#F07567 / #0B0C10 — 7.4:1 AA</span></div>
+    </div>
+  </div>
+  <div class="block focus-demo">
+    <h2 class="section-title">Focus visible</h2>
+    <div class="action-row">
+      <button class="btn btn-ghost">État focus</button>
+      <span class="muted">Anneau périwinkle 2 px, offset 2 px — sur tous les contrôles, jamais supprimé.</span>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Règles</h2>
+    <div style="display:grid;gap:10px;max-width:640px">
+      <p class="muted" style="margin:0"><span class="mono" style="color:var(--text)">44px</span> — cible tactile minimum sur mobile (boutons, liens du drawer, checkboxes).</p>
+      <p class="muted" style="margin:0"><span class="mono" style="color:var(--text)">couleur ≠ seule</span> — ok/warn/bad toujours accompagnés d'un mot (le stamp l'impose).</p>
+      <p class="muted" style="margin:0"><span class="mono" style="color:var(--text)">reduced-motion</span> — toutes les animations coupées via <span class="mono">prefers-reduced-motion</span>.</p>
+      <p class="muted" style="margin:0"><span class="mono" style="color:var(--text)">ordre de focus</span> — suit l'ordre visuel ; les overlays (modal, palette, drawer) rendent le fond inerte et se ferment à Escape.</p>
+      <p class="muted" style="margin:0"><span class="mono" style="color:var(--text)">aria</span> — modal : <span class="mono">role="dialog" aria-modal</span> · toast : <span class="mono">role="status"</span> · pagination : <span class="mono">nav aria-label</span>.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

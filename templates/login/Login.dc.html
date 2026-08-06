@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Login" description="Page d'authentification : panneau centré, tabs de méthode, formulaire" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav"><a href="#">Docs</a><a href="#">Status</a></nav>
+</header>
+<main style="flex:1;display:flex;align-items:center;justify-content:center;padding:40px 20px">
+  <div class="panel anim-rise" style="width:100%;max-width:400px">
+    <p class="eyebrow">theogalh.dev · auth</p>
+    <h1 class="display" style="font-size:24px">Sign in</h1>
+    <p class="sub" style="margin-bottom:20px">One account for every app.</p>
+    <div class="tabs">
+      <button class="tab active">Email</button>
+      <button class="tab">Google</button>
+      <button class="tab">Jellyfin</button>
+    </div>
+    <div class="form">
+      <div class="field">
+        <label class="field-label" for="l-email">Email</label>
+        <input id="l-email" type="email" placeholder="you@example.com" />
+      </div>
+      <div class="field">
+        <label class="field-label" for="l-pass">Password</label>
+        <input id="l-pass" type="password" placeholder="••••••••••••" />
+      </div>
+      <button class="btn btn-primary" style="width:100%">Sign in</button>
+      <p class="muted" style="margin:0;text-align:center;font-size:13px"><a href="#">Forgot password?</a> · <a href="#">Create account</a></p>
+    </div>
+  </div>
+</main>
+<footer class="footer" style="text-align:center">theogalh.dev</footer>
+</div>
+</x-dc>
+</body>
+</html>

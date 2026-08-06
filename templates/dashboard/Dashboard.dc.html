@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Dashboard" description="KPIs, grille d'apps et ledger d'activité récente" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div>
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#" class="active">Dashboard</a>
+    <a href="#">Apps</a>
+    <a href="#">Admin</a>
+    <button class="logout">Log out</button>
+  </nav>
+</header>
+<div class="admin-wrap">
+  <div class="page-head anim-rise">
+    <p class="eyebrow">dashboard</p>
+    <h1 class="display">Good evening, Theo</h1>
+    <p class="sub">Everything is quiet. 3 apps running.</p>
+  </div>
+  <div class="stats-grid stagger" style="margin-bottom:28px">
+    <div class="stat-card"><span class="stat-label">Requests / day</span><span class="stat-value">12,480</span><span class="stat-delta up">▲ 8.2%</span></div>
+    <div class="stat-card"><span class="stat-label">Active tokens</span><span class="stat-value">37</span><span class="stat-delta">— stable</span></div>
+    <div class="stat-card"><span class="stat-label">Storage</span><span class="stat-value">214 GB</span><span class="stat-delta up">▲ 3 GB</span></div>
+    <div class="stat-card"><span class="stat-label">Failed logins</span><span class="stat-value">12</span><span class="stat-delta down">▼ 40%</span></div>
+  </div>
+  <div class="section">
+    <h2 class="section-title">Apps</h2>
+    <div class="apps-grid stagger">
+      <div class="app-card"><div class="head"><span class="applogo">Y</span><h3>ytp</h3></div><p>Download and archive any video.</p><a class="open" href="#">Open app →</a></div>
+      <div class="app-card"><div class="head"><span class="applogo">S</span><h3>screen</h3></div><p>Instant screenshot hosting.</p><a class="open" href="#">Open app →</a></div>
+      <div class="app-card"><div class="head"><span class="applogo">V</span><h3>vote-lois</h3></div><p>Track and vote on legislative texts.</p><a class="open" href="#">Open app →</a></div>
+    </div>
+  </div>
+  <div class="panel anim-rise">
+    <h2 class="section-title">Recent activity</h2>
+    <div class="ledger-scroll">
+      <table class="ledger">
+        <thead><tr><th>Time</th><th>Actor</th><th>Action</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td class="t">18:42</td><td>theo</td><td>token.create</td><td>ytp-cli</td></tr>
+          <tr><td class="t">17:05</td><td>media_admin</td><td>upload.finish</td><td>clip-0492.mp4</td></tr>
+          <tr><td class="t">15:58</td><td>theo</td><td>app.deploy</td><td>screen v1.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<footer class="footer">theogalh.dev</footer>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Deck" description="Présentation sombre 16:9 : titre, contexte, démo, chiffres, fin" -->
+<helmet><script src="./ds-base.js"></script><style>body{background:#050609}.slide{width:1280px;height:720px;margin:24px auto;background:#0b0c10;border:1px solid #1f2430;border-radius:12px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:center;padding:80px}</style></helmet>
+<div>
+<section class="slide" data-screen-label="01">
+  <p class="eyebrow" style="font-size:14px">theogalh.dev · august 2026</p>
+  <h1 style="font-family:var(--font-display);font-size:72px;font-weight:700;letter-spacing:-0.02em;margin:0;line-height:1.05;max-width:900px">Small tools, built quietly<span style="color:#8b93f8">.</span></h1>
+  <p style="color:#8d93a5;font-size:26px;margin:24px 0 0;max-width:700px">Self-hosted apps for media, screenshots and civic data.</p>
+  <span style="position:absolute;bottom:40px;left:80px;width:14px;height:14px;border-radius:50%;background:#8b93f8"></span>
+</section>
+<section class="slide" data-screen-label="02">
+  <p class="eyebrow" style="font-size:14px">01 · le problème</p>
+  <h2 style="font-family:var(--font-display);font-size:48px;font-weight:600;letter-spacing:-0.01em;margin:0 0 28px;max-width:880px">Une phrase qui pose le problème, sans détour.</h2>
+  <p style="color:#8d93a5;font-size:24px;line-height:1.55;margin:0;max-width:820px">Deux ou trois phrases de contexte maximum. Si ça ne tient pas ici, ça mérite deux slides — pas une slide dense.</p>
+</section>
+<section class="slide" data-screen-label="03">
+  <p class="eyebrow" style="font-size:14px">02 · les chiffres</p>
+  <h2 style="font-family:var(--font-display);font-size:48px;font-weight:600;letter-spacing:-0.01em;margin:0 0 40px">Trois chiffres, pas dix.</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+    <div class="stat-card" style="padding:28px"><span class="stat-label" style="font-size:13px">Requests / day</span><span class="stat-value" style="font-size:52px">12,480</span><span class="stat-delta up" style="font-size:16px">▲ 8.2%</span></div>
+    <div class="stat-card" style="padding:28px"><span class="stat-label" style="font-size:13px">Apps running</span><span class="stat-value" style="font-size:52px">3</span><span class="stat-delta" style="font-size:16px">— stable</span></div>
+    <div class="stat-card" style="padding:28px"><span class="stat-label" style="font-size:13px">Downtime 2026</span><span class="stat-value" style="font-size:52px">0 h</span><span class="stat-delta up" style="font-size:16px">▲ so far</span></div>
+  </div>
+</section>
+<section class="slide" data-screen-label="04" style="background:#6a72f2;justify-content:flex-end;padding-bottom:70px">
+  <p style="font-family:var(--font-mono);font-size:15px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.65);margin:0 0 14px">section 02</p>
+  <h2 style="font-family:var(--font-display);font-size:64px;font-weight:700;letter-spacing:-0.02em;color:#ffffff;margin:0;max-width:900px;line-height:1.05">Un séparateur de partie, une idée.</h2>
+  <span style="position:absolute;top:70px;left:80px;width:16px;height:16px;border-radius:50%;background:#ffffff"></span>
+</section>
+<section class="slide" data-screen-label="05" style="flex-direction:row;align-items:center;gap:60px;padding:70px">
+  <div style="flex:1;min-width:0">
+    <p class="eyebrow" style="font-size:14px">03 · la démo</p>
+    <h2 style="font-family:var(--font-display);font-size:44px;font-weight:600;letter-spacing:-0.01em;margin:0 0 20px;line-height:1.15">Slide split : le texte à gauche, la preuve à droite.</h2>
+    <p style="color:#8d93a5;font-size:22px;line-height:1.55;margin:0">Trois lignes maximum. Le screenshot fait le reste du travail.</p>
+  </div>
+  <div style="flex:1.1;height:480px;border:1px solid #262b37;border-radius:12px;background:repeating-linear-gradient(45deg,#14161d,#14161d 12px,#171a22 12px,#171a22 24px);display:flex;align-items:center;justify-content:center">
+    <span style="font-family:var(--font-mono);font-size:14px;color:#767d90">screenshot produit — glisser une image ici</span>
+  </div>
+</section>
+<section class="slide" data-screen-label="06" style="flex-direction:row;align-items:center;gap:60px;padding:70px">
+  <div style="flex:1;min-width:0">
+    <p class="eyebrow" style="font-size:14px">04 · l'API</p>
+    <h2 style="font-family:var(--font-display);font-size:44px;font-weight:600;letter-spacing:-0.01em;margin:0 0 20px;line-height:1.15">Une requête, un résultat.</h2>
+    <div class="endpoint" style="font-size:18px"><span class="method post" style="font-size:14px;padding:5px 14px">POST</span><span>/v1/videos/analyze</span></div>
+  </div>
+  <div style="flex:1.2;min-width:0">
+    <div class="code-block" style="font-size:17px">
+      <div class="code-head" style="font-size:13px"><span>curl</span></div>
+      <pre style="padding:22px 24px;line-height:1.8">curl <span class="c-kw">-X POST</span> api.theogalh.dev/v1/videos/analyze \
+  <span class="c-kw">-H</span> <span class="c-str">"Authorization: Bearer $TOKEN"</span> \
+  <span class="c-kw">-d</span> <span class="c-str">'{"url": "youtube.com/watch?v=dQw4"}'</span>
+
+<span class="c-com"># 202</span>
+{ <span class="c-str">"id"</span>: <span class="c-str">"an_8f2c"</span>, <span class="c-str">"status"</span>: <span class="c-str">"queued"</span> }</pre>
+    </div>
+  </div>
+</section>
+<section class="slide" data-screen-label="07">
+  <p class="eyebrow" style="font-size:14px">05 · la tendance</p>
+  <h2 style="font-family:var(--font-display);font-size:48px;font-weight:600;letter-spacing:-0.01em;margin:0 0 44px">Un graphique par slide, pas plus.</h2>
+  <div class="bars" style="max-width:860px;gap:18px">
+    <div class="bar-row" style="grid-template-columns:160px 1fr 90px;font-size:20px"><span class="bar-label">ytp</span><span class="bar-track" style="height:14px"><span class="bar-fill" style="width:100%"></span></span><span class="bar-val" style="font-size:18px">8,420</span></div>
+    <div class="bar-row" style="grid-template-columns:160px 1fr 90px;font-size:20px"><span class="bar-label">screen</span><span class="bar-track" style="height:14px"><span class="bar-fill" style="width:35%"></span></span><span class="bar-val" style="font-size:18px">2,960</span></div>
+    <div class="bar-row" style="grid-template-columns:160px 1fr 90px;font-size:20px"><span class="bar-label">vote-lois</span><span class="bar-track" style="height:14px"><span class="bar-fill" style="width:9%"></span></span><span class="bar-val" style="font-size:18px">780</span></div>
+  </div>
+  <p style="color:#767d90;font-family:var(--font-mono);font-size:15px;margin:32px 0 0">requests / day · july 2026</p>
+</section>
+<section class="slide" data-screen-label="08" style="align-items:center;text-align:center">
+  <span style="font-family:var(--font-display);font-size:120px;font-weight:700;color:#8b93f8;line-height:1">"</span>
+  <blockquote style="font-family:var(--font-display);font-size:44px;font-weight:600;letter-spacing:-0.01em;color:#edeef3;margin:0;max-width:920px;line-height:1.25">Une citation courte qui porte, jamais plus de deux lignes.</blockquote>
+  <p style="color:#8d93a5;font-size:22px;margin:28px 0 0">— Qui l'a dit, contexte</p>
+</section>
+<section class="slide" data-screen-label="09" style="align-items:center;text-align:center">
+  <span style="width:20px;height:20px;border-radius:50%;background:#8b93f8;margin:0 auto 28px"></span>
+  <h2 style="font-family:var(--font-display);font-size:56px;font-weight:700;letter-spacing:-0.02em;margin:0">Merci.</h2>
+  <p style="color:#8d93a5;font-size:24px;margin:18px 0 0">theogalh.dev · theo@theogalh.dev</p>
+</section>
+</div>
+</x-dc>
+</body>
+</html>

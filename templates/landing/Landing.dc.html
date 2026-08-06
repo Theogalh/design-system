@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Landing" description="Page d'accueil : héro sobre, chips de liens, cartes d'apps" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div>
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#">Apps</a>
+    <a href="#">About</a>
+    <a href="#" class="btn btn-primary btn-sm" style="margin-left:10px">Sign in</a>
+  </nav>
+</header>
+<main style="max-width:860px;margin:0 auto;padding:80px 40px 60px">
+  <div class="anim-rise">
+    <p class="eyebrow">theogalh.dev</p>
+    <h1 class="display" style="font-size:44px;line-height:1.1;max-width:560px">Small tools, built quietly<span style="color:#8b93f8">.</span></h1>
+    <p class="sub" style="max-width:480px;margin-top:12px;font-size:16px">Self-hosted apps for media, screenshots and civic data. No tracking, no noise.</p>
+    <div class="action-row" style="margin-top:24px">
+      <a class="btn btn-primary" href="#">Open dashboard</a>
+      <a class="btn btn-ghost" href="#">Read the docs</a>
+    </div>
+    <div class="action-row" style="margin-top:20px">
+      <a class="chip" href="#">GitHub</a>
+      <a class="chip" href="#">Status</a>
+      <a class="chip accent" href="#">API</a>
+    </div>
+  </div>
+  <hr class="hairline" style="margin:48px 0" />
+  <div class="apps-grid stagger">
+    <div class="app-card"><div class="head"><span class="applogo">Y</span><h3>ytp</h3></div><p>Download and archive any video.</p><a class="open" href="#">Open app →</a></div>
+    <div class="app-card"><div class="head"><span class="applogo">S</span><h3>screen</h3></div><p>Instant screenshot hosting, no compression.</p><a class="open" href="#">Open app →</a></div>
+    <div class="app-card"><div class="head"><span class="applogo">V</span><h3>vote-lois</h3></div><p>Track and vote on legislative texts.</p><a class="open" href="#">Open app →</a></div>
+  </div>
+</main>
+<footer class="footer">theogalh.dev · built with the dot<span class="dot faint" style="margin-left:4px"></span></footer>
+</div>
+</x-dc>
+</body>
+</html>

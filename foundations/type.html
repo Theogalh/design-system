@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Typography" subtitle="Space Grotesk / Instrument Sans / IBM Plex Mono" viewport="940x900" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Typography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .spec { display: grid; grid-template-columns: 170px 1fr; gap: 18px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line-soft); }
+  .spec .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); }
+  .face { background: var(--panel); border: 1px solid var(--line-soft); border-radius: var(--r-md); padding: 18px; display: grid; gap: 4px; }
+  .faces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .face .sample { font-size: 22px; }
+  .face .who { font-size: 12.5px; color: var(--muted); }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · foundations</p>
+  <h1 class="display">Typography</h1>
+  <p class="sub">Three faces, three jobs. Space Grotesk speaks, Instrument Sans works, IBM Plex Mono records.</p>
+
+  <hr class="hairline" />
+
+  <div class="section">
+    <div class="faces">
+      <div class="face">
+        <span class="sample" style="font-family:var(--font-display);font-weight:700">Space Grotesk</span>
+        <span class="who">Display — wordmarks, page titles, app card names. Weights 600–700.</span>
+      </div>
+      <div class="face">
+        <span class="sample" style="font-family:var(--font-ui)">Instrument Sans</span>
+        <span class="who">UI — body, buttons, forms, nav. Weights 400–600.</span>
+      </div>
+      <div class="face">
+        <span class="sample" style="font-family:var(--font-mono);font-size:19px">IBM Plex Mono</span>
+        <span class="who">Data — IDs, tokens, audit rows, eyebrows, stamps. Weights 400–500.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Scale</h2>
+    <div class="spec"><span class="label">Wordmark · 22/700</span><span class="wordmark">theoapi<span class="dot"></span></span></div>
+    <div class="spec"><span class="label">Title · 28/600</span><h1 class="display" style="margin:0">Review accounts and access</h1></div>
+    <div class="spec"><span class="label">Section · 15/600</span><h2 class="section-title" style="margin:0">OAuth client</h2></div>
+    <div class="spec"><span class="label">Body · 15/400</span><span>Sign in to continue to Jellyfin. Your account works across every app.</span></div>
+    <div class="spec"><span class="label">Muted · 14/400</span><span class="muted">Screenshots are automatically deleted after 7 days.</span></div>
+    <div class="spec"><span class="label">Eyebrow · mono 11</span><span class="eyebrow" style="margin:0">Fonctionne aussi avec</span></div>
+    <div class="spec"><span class="label">Data · mono 12.5</span><span class="mono" style="font-size:12.5px">user:8f3d21c7 · role.assign · 2026-08-06T14:02:11Z</span></div>
+  </div>
+</div>
+
+</body>
+</html>

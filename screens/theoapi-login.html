@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="TheoAPI — Login" subtitle="Tabbed sign-in: Email / Google / Jellyfin" viewport="1360x800" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TheoAPI — Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .auth-wrap { min-height: calc(100vh - 63px); display: grid; place-items: center; padding: 40px; }
+  .auth { width: min(400px, 100%); }
+  .auth-head { text-align: center; margin-bottom: 28px; }
+  .auth-head .wordmark { font-size: 26px; }
+  .auth-head p { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+  .google-btn { width: 100%; background: #fff; color: #1c1c1c; }
+  .google-btn:hover { background: #e8e8ee; }
+</style>
+<header class="topbar">
+  <a class="wordmark" href="#">theoapi<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#" class="active">Login</a>
+    <a href="#">Sign up</a>
+  </nav>
+</header>
+<div class="auth-wrap">
+  <div class="auth">
+    <div class="auth-head">
+      <span class="wordmark">theoapi<span class="dot"></span></span>
+      <p>One account for every app on theogalh.dev</p>
+    </div>
+    <div class="panel">
+      <div class="tabs">
+        <button class="tab active">Email</button>
+        <button class="tab">Google</button>
+        <button class="tab">Jellyfin</button>
+      </div>
+      <div class="form">
+        <div class="field">
+          <label class="field-label" for="l-email">Email</label>
+          <input id="l-email" type="email" placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="l-pass">Password</label>
+          <input id="l-pass" type="password" />
+        </div>
+        <button class="btn btn-primary" style="width:100%">Login</button>
+      </div>
+      <p style="text-align:center;margin:18px 0 0">
+        <a href="#" class="muted" style="text-decoration:none;font-size:13px">Forgot password?</a>
+      </p>
+    </div>
+    <p class="muted" style="text-align:center;margin-top:20px;font-size:13px">
+      No account yet? <a href="#" style="color:var(--peri-hi);text-decoration:none;font-weight:600">Sign up</a>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

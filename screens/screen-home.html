@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="screen — Home" subtitle="Dropzone, visibility toggle, upload" viewport="1360x700" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>screen — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .hero { max-width: 560px; margin: 0 auto; padding: 72px 24px 64px; }
+  .hero .lead { color: var(--muted); font-size: 15px; margin: 0 0 24px; text-align: center; }
+  .vis-row { display: flex; align-items: center; gap: 14px; margin: 18px 0; }
+  .up-arrow { font-size: 26px; color: var(--muted); }
+</style>
+<header class="topbar">
+  <a class="wordmark" href="#">screen<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#">ShareX</a>
+    <a href="#">Gallery</a>
+  </nav>
+</header>
+<div class="hero">
+  <p class="lead">Upload, edit, and share — no compression.</p>
+  <div class="dropzone">
+    <div class="up-arrow">↥</div>
+    <div class="dz-title"><strong>Click to upload</strong> or drag &amp; drop</div>
+    <div class="dz-hint">PNG, JPEG, WebP, GIF — max 50 MB</div>
+    <div class="dz-fine">Screenshots are automatically deleted after 7 days</div>
+  </div>
+  <div class="vis-row">
+    <span class="field-label" style="width:64px">Visibility</span>
+    <div class="seg">
+      <button class="active">Public</button>
+      <button>Private</button>
+    </div>
+    <span class="muted" style="font-size:13px">Shown in gallery</span>
+  </div>
+  <button class="btn btn-primary" style="width:100%" disabled>Upload</button>
+</div>
+
+</body>
+</html>

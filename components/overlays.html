@@ -1,0 +1,67 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Overlays" subtitle="Modal, toast, dropdown, tooltip" viewport="940x900" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overlays</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+  .modal-demo .modal-overlay { position: static; padding: 0; background: none; backdrop-filter: none; animation: none; display: block; }
+  .toast-demo .toast-stack { position: static; }
+  .menu-demo .menu { position: static; display: inline-grid; animation: none; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Overlays</h1>
+  <p class="sub">Layered surfaces: confirm before destroying, notify without blocking.</p>
+  <hr class="hairline" />
+  <div class="block modal-demo">
+    <h2 class="section-title">Modal — confirmation</h2>
+    <div class="modal-overlay">
+      <div class="modal">
+        <h3>Delete account</h3>
+        <p>This permanently removes your account and every app grant tied to it. This cannot be undone.</p>
+        <div class="modal-actions">
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-danger">Delete account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block toast-demo">
+    <h2 class="section-title">Toasts</h2>
+    <div class="toast-stack">
+      <div class="toast ok"><span class="dot ok"></span><span>API key regenerated.</span><button class="toast-close" aria-label="Dismiss">×</button></div>
+      <div class="toast"><span class="dot"></span><span>Analysis queued — this can take a minute.</span><button class="toast-close" aria-label="Dismiss">×</button></div>
+      <div class="toast bad"><span class="dot bad"></span><span>Upload failed: file exceeds 2 GB.</span><button class="toast-close" aria-label="Dismiss">×</button></div>
+    </div>
+  </div>
+  <div class="block menu-demo">
+    <h2 class="section-title">Dropdown menu</h2>
+    <div class="action-row" style="align-items:flex-start">
+      <button class="btn btn-ghost btn-sm">Actions <span style="font-size:10px">▾</span></button>
+      <span class="menu">
+        <button>Rename app</button>
+        <button>Rotate secret</button>
+        <span class="sep"></span>
+        <button class="danger">Revoke all tokens</button>
+      </span>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Tooltip</h2>
+    <div class="action-row" style="padding-top:36px">
+      <span class="tip"><button class="btn btn-ghost btn-sm">client_id</button><span class="tip-body" style="opacity:1;transform:translateX(-50%) translateY(0)">Copy to clipboard</span></span>
+      <span class="muted">Shown on hover / focus</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

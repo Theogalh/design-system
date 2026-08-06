@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Motion" subtitle="Entrées rise/fade, stagger, pulse, skeleton sweep" viewport="940x620" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motion</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+  .replay-zone .stagger > * { animation-duration: .5s; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · foundations</p>
+  <h1 class="display">Motion</h1>
+  <p class="sub">Short, quiet, purposeful. 150–350 ms, one easing (cubic-bezier .2 .8 .2 1), and everything respects reduced-motion.</p>
+  <hr class="hairline" />
+  <div class="block replay-zone">
+    <h2 class="section-title">Enter — .anim-rise / .stagger</h2>
+    <p class="muted" style="margin:0 0 12px">Cards rise 8px on entry; siblings stagger by 50 ms.</p>
+    <div class="apps-grid stagger" id="stagger-demo">
+      <div class="app-card"><div class="head"><span class="applogo">Y</span><h3>ytp</h3></div><p>Rises first.</p></div>
+      <div class="app-card"><div class="head"><span class="applogo">S</span><h3>screen</h3></div><p>+50 ms.</p></div>
+      <div class="app-card"><div class="head"><span class="applogo">V</span><h3>vote-lois</h3></div><p>+100 ms.</p></div>
+    </div>
+    <div style="margin-top:14px"><button class="btn btn-ghost btn-sm" onclick="var d=document.getElementById('stagger-demo');d.classList.remove('stagger');void d.offsetWidth;d.classList.add('stagger')">Replay</button></div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Live — .dot.pulse</h2>
+    <div class="action-row" style="gap:20px">
+      <span class="stamp ok" style="gap:7px"><span class="dot ok pulse" style="width:6px;height:6px"></span>processing</span>
+      <span class="muted">The pulse means "working", never decoration.</span>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Loading — skeleton sweep</h2>
+    <span class="skel line" style="display:block;max-width:380px"></span>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Rules</h2>
+    <p class="muted" style="margin:0">Micro-interactions (hover, press, switch) ≤ 180 ms · entrances ≤ 350 ms · never animate layout on scroll · <span class="mono">prefers-reduced-motion</span> kills everything.</p>
+  </div>
+</div>
+</body>
+</html>

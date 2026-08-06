@@ -1,0 +1,147 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Site du design system" subtitle="Page de présentation publique" viewport="1280x2000" -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>theogalh.dev — Design System</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/logo.svg">
+</head>
+<body>
+<style>
+  .hero { max-width: 1100px; margin: 0 auto; padding: 90px 40px 70px; }
+  .hero h1 { font-family: var(--font-display); font-size: 56px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px; line-height: 1.08; max-width: 720px; }
+  .hero .sub { font-size: 18px; max-width: 560px; }
+  .swatchline { display: flex; gap: 8px; margin: 28px 0 32px; }
+  .swatchline span { width: 34px; height: 34px; border-radius: 50%; }
+  .sect { max-width: 1100px; margin: 0 auto; padding: 0 40px 56px; }
+  .cards3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .demo-strip { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; background: var(--panel); border: 1px solid var(--line-soft); border-radius: var(--r-lg); padding: 22px 24px; }
+  .count { font-family: var(--font-display); font-size: 40px; font-weight: 600; letter-spacing: -0.02em; }
+  @media (max-width: 600px) { .hero h1 { font-size: 36px; } .hero { padding: 56px 20px 40px; } .sect { padding: 0 20px 40px; } }
+</style>
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="foundations/colors.html">Foundations</a>
+    <a href="components/controls.html">Components</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="assets/swagger-theogalh.css">Swagger CSS</a>
+    <a href="readme.md">Readme</a>
+    <a href="https://github.com/Theogalh/design-system" class="chip" style="margin-left:10px">GitHub</a>
+  </nav>
+</header>
+<div class="hero anim-rise">
+  <p class="eyebrow">theogalh.dev · design system</p>
+  <h1>Un point, une couleur, zéro bruit<span style="color:var(--peri)">.</span></h1>
+  <p class="sub">Le système qui habille toutes les apps theogalh.dev : un fond presque noir, un accent périwinkle, trois signaux — et des composants qui disent ce qu'ils font.</p>
+  <div class="swatchline">
+    <span style="background:var(--peri)"></span>
+    <span style="background:var(--peri-btn)"></span>
+    <span style="background:var(--ok)"></span>
+    <span style="background:var(--warn)"></span>
+    <span style="background:var(--bad)"></span>
+    <span style="background:var(--panel-2);border:1px solid var(--line)"></span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="foundations/colors.html">Explorer les foundations</a>
+    <a class="btn btn-ghost" href="https://github.com/Theogalh/design-system">Voir le repo</a>
+  </div>
+</div>
+<div class="sect anim-rise">
+  <div class="stats-grid" style="max-width:760px">
+    <div class="stat-card"><span class="stat-label">Composants</span><span class="count">24</span></div>
+    <div class="stat-card"><span class="stat-label">Templates</span><span class="count">11</span></div>
+    <div class="stat-card"><span class="stat-label">Tokens</span><span class="count">38</span></div>
+    <div class="stat-card"><span class="stat-label">Thèmes</span><span class="count">2</span></div>
+  </div>
+</div>
+<div class="sect">
+  <h2 class="section-title" style="font-size:18px;font-family:var(--font-display)">En un coup d'œil</h2>
+  <div class="demo-strip stagger">
+    <button class="btn btn-primary">Analyser</button>
+    <button class="btn btn-ghost">Cancel</button>
+    <span class="stamp ok">verified</span>
+    <span class="stamp warn">pending</span>
+    <span class="chip accent">API</span>
+    <span class="method post">POST</span>
+    <span class="plate">v1.4.0</span>
+    <label class="switch"><input type="checkbox" checked /><span class="track"></span></label>
+    <span class="key">⌘</span><span class="key">K</span>
+    <span class="dot pulse" style="width:10px;height:10px"></span>
+  </div>
+</div>
+<div class="sect">
+  <h2 class="section-title" style="font-size:18px;font-family:var(--font-display)">Foundations</h2>
+  <div class="cards3 stagger">
+    <a class="app-card" href="foundations/colors.html" style="text-decoration:none;color:var(--text)"><h3>Colors</h3><p>Un ground, un accent, trois signaux.</p></a>
+    <a class="app-card" href="foundations/type.html" style="text-decoration:none;color:var(--text)"><h3>Type</h3><p>Space Grotesk, Instrument Sans, Plex Mono.</p></a>
+    <a class="app-card" href="foundations/dot.html" style="text-decoration:none;color:var(--text)"><h3>The dot</h3><p>La signature du système.</p></a>
+    <a class="app-card" href="foundations/motion.html" style="text-decoration:none;color:var(--text)"><h3>Motion</h3><p>150–350 ms, une seule courbe.</p></a>
+    <a class="app-card" href="foundations/themes.html" style="text-decoration:none;color:var(--text)"><h3>Themes</h3><p>Dark par défaut, light par attribut.</p></a>
+    <a class="app-card" href="foundations/brand.html" style="text-decoration:none;color:var(--text)"><h3>Brand &amp; voice</h3><p>Calme, précis, un peu sec.</p></a>
+    <a class="app-card" href="foundations/a11y.html" style="text-decoration:none;color:var(--text)"><h3>Accessibility</h3><p>AA partout, focus visible, 44 px.</p></a>
+  </div>
+</div>
+<div class="sect">
+  <h2 class="section-title" style="font-size:18px;font-family:var(--font-display)">Composants</h2>
+  <p class="muted" style="margin:0 0 14px">Les 24 composants avec leurs noms et classes CSS sont listés dans le <a href="catalogue.html">catalogue</a>.</p>
+  <div class="cards3 stagger">
+    <a class="app-card" href="components/controls.html" style="text-decoration:none;color:var(--text)"><h3>Controls</h3><p>Boutons, champs, tabs, segmented, chips.</p></a>
+    <a class="app-card" href="components/surfaces.html" style="text-decoration:none;color:var(--text)"><h3>Surfaces</h3><p>Panels, dropzone, empty states, meta.</p></a>
+    <a class="app-card" href="components/data.html" style="text-decoration:none;color:var(--text)"><h3>Data</h3><p>Ledger, plates, stamps en contexte.</p></a>
+    <a class="app-card" href="components/overlays.html" style="text-decoration:none;color:var(--text)"><h3>Overlays</h3><p>Modal, toast, dropdown, tooltip.</p></a>
+    <a class="app-card" href="components/feedback.html" style="text-decoration:none;color:var(--text)"><h3>Feedback</h3><p>Switch, pagination, skeleton, stats.</p></a>
+    <a class="app-card" href="components/navigation.html" style="text-decoration:none;color:var(--text)"><h3>Navigation</h3><p>Palette ⌘K, theme switcher, drawer.</p></a>
+    <a class="app-card" href="components/charts.html" style="text-decoration:none;color:var(--text)"><h3>Charts</h3><p>Barres, donut, sparkline.</p></a>
+    <a class="app-card" href="components/tables.html" style="text-decoration:none;color:var(--text)"><h3>Tables</h3><p>DataTable : tri, sélection, bulk, pagination.</p></a>
+    <a class="app-card" href="components/code.html" style="text-decoration:none;color:var(--text)"><h3>Code &amp; API</h3><p>Blocs de code, méthodes HTTP, Swagger.</p></a>
+    <a class="app-card" href="components/media.html" style="text-decoration:none;color:var(--text)"><h3>Media &amp; jobs</h3><p>Uploads, player, log viewer.</p></a>
+    <a class="app-card" href="components/patterns.html" style="text-decoration:none;color:var(--text)"><h3>Patterns</h3><p>Breadcrumb, search, icônes, 404.</p></a>
+  </div>
+</div>
+<div class="sect">
+  <h2 class="section-title" style="font-size:18px;font-family:var(--font-display)">Écrans de référence</h2>
+  <div class="cards3 stagger">
+    <a class="app-card" href="screens/screen-home.html" style="text-decoration:none;color:var(--text)"><h3>screen — home</h3><p>Dépôt de screenshots.</p></a>
+    <a class="app-card" href="screens/ytp-home.html" style="text-decoration:none;color:var(--text)"><h3>ytp — home</h3><p>Analyse et téléchargement vidéo.</p></a>
+    <a class="app-card" href="screens/theoapi-login.html" style="text-decoration:none;color:var(--text)"><h3>theoapi — login</h3><p>Authentification multi-méthodes.</p></a>
+    <a class="app-card" href="screens/theoapi-dashboard.html" style="text-decoration:none;color:var(--text)"><h3>theoapi — dashboard</h3><p>Apps et activité.</p></a>
+    <a class="app-card" href="screens/theoapi-admin-users.html" style="text-decoration:none;color:var(--text)"><h3>admin — users</h3><p>Master-detail utilisateurs.</p></a>
+    <a class="app-card" href="screens/theoapi-admin-apps.html" style="text-decoration:none;color:var(--text)"><h3>admin — apps</h3><p>Clients OAuth.</p></a>
+    <a class="app-card" href="screens/theoapi-admin-audit.html" style="text-decoration:none;color:var(--text)"><h3>admin — audit</h3><p>Ledger d'événements.</p></a>
+  </div>
+</div>
+<div class="sect">
+  <h2 class="section-title" style="font-size:18px;font-family:var(--font-display)">Templates</h2>
+  <p class="muted" style="margin:0 0 14px">Points de départ copiables pour tout nouveau projet.</p>
+  <div class="cards3 stagger">
+    <a class="app-card" href="templates/landing/Landing.dc.html" style="text-decoration:none;color:var(--text)"><h3>Landing</h3><p>Héro sobre + cartes d'apps.</p></a>
+    <a class="app-card" href="templates/login/Login.dc.html" style="text-decoration:none;color:var(--text)"><h3>Login</h3><p>Panneau centré, tabs de méthode.</p></a>
+    <a class="app-card" href="templates/dashboard/Dashboard.dc.html" style="text-decoration:none;color:var(--text)"><h3>Dashboard</h3><p>KPIs, apps, activité.</p></a>
+    <a class="app-card" href="templates/admin-shell/AdminShell.dc.html" style="text-decoration:none;color:var(--text)"><h3>Admin shell</h3><p>Topbar + rail + contenu.</p></a>
+    <a class="app-card" href="templates/settings/Settings.dc.html" style="text-decoration:none;color:var(--text)"><h3>Settings</h3><p>Sections, switches, danger zone.</p></a>
+    <a class="app-card" href="templates/api-reference/ApiReference.dc.html" style="text-decoration:none;color:var(--text)"><h3>API reference</h3><p>Endpoints + exemples curl.</p></a>
+    <a class="app-card" href="templates/status/Status.dc.html" style="text-decoration:none;color:var(--text)"><h3>Status page</h3><p>Uptime 90 j + incidents.</p></a>
+    <a class="app-card" href="templates/changelog/Changelog.dc.html" style="text-decoration:none;color:var(--text)"><h3>Changelog</h3><p>Versions + tags breaking/added/fixed.</p></a>
+    <a class="app-card" href="templates/deck/Deck.dc.html" style="text-decoration:none;color:var(--text)"><h3>Deck</h3><p>9 slides 16:9, 5 layouts.</p></a>
+    <a class="app-card" href="templates/email/Email.dc.html" style="text-decoration:none;color:var(--text)"><h3>Email</h3><p>Transactionnel, styles inline.</p></a>
+    <a class="app-card" href="templates/social-card/SocialCard.dc.html" style="text-decoration:none;color:var(--text)"><h3>Social card</h3><p>OG 1200×630.</p></a>
+  </div>
+</div>
+<div class="sect">
+  <h2 class="section-title" style="font-size:18px;font-family:var(--font-display)">Intégration</h2>
+  <div class="code-block" style="max-width:640px">
+    <div class="code-head"><span>html</span></div>
+    <pre>&lt;link rel=<span class="c-str">"stylesheet"</span> href=<span class="c-str">"styles.css"</span>&gt;
+<span class="c-com">&lt;!-- FastAPI : /docs aux couleurs du système --&gt;</span>
+swagger_css_url=<span class="c-str">"/static/swagger-theogalh.css"</span></pre>
+  </div>
+</div>
+<footer class="footer" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+  <span>theogalh.dev · design system</span>
+  <span>dark by default · built with the dot<span class="dot faint" style="margin-left:4px"></span></span>
+</footer>
+</body>
+</html>

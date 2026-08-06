@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Patterns" subtitle="Breadcrumb, search, tri, sparkline, icônes, 404" viewport="940x1100" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Patterns</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../_ds_bundle.js"></script>
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+  .icon-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .icon-cell { display: grid; justify-items: center; gap: 6px; width: 76px; padding: 12px 4px; border: 1px solid var(--line-soft); border-radius: var(--r-md); color: var(--text); }
+  .icon-cell span { font-family: var(--font-mono); font-size: 10px; color: var(--faint); }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Patterns</h1>
+  <p class="sub">Navigation, recherche et données : les petites pièces qui tiennent les écrans ensemble.</p>
+  <hr class="hairline" />
+  <div class="block">
+    <h2 class="section-title">Breadcrumb</h2>
+    <nav class="crumbs"><a href="#">Admin</a><span class="sep">/</span><a href="#">Apps</a><span class="sep">/</span><span class="current">ytp</span></nav>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Search</h2>
+    <div id="search-demo" style="max-width:380px"></div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Sortable ledger</h2>
+    <div class="ledger-scroll">
+      <table class="ledger">
+        <thead><tr><th class="sortable sorted">Time <span class="arrow">▼</span></th><th class="sortable">Actor</th><th class="sortable">Action</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td class="t">18:42</td><td>theo</td><td>token.create</td><td>ytp-cli</td></tr>
+          <tr><td class="t">17:05</td><td>media_admin</td><td>upload.finish</td><td>clip-0492.mp4</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Sparkline dans une stat card</h2>
+    <div class="stats-grid" style="max-width:420px">
+      <div class="stat-card"><span class="stat-label">Requests / day</span><span class="stat-value">12,480</span><span id="spark-demo"></span></div>
+      <div class="stat-card"><span class="stat-label">Latency p95</span><span class="stat-value">84 ms</span><span id="spark-demo-2"></span></div>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Icônes — 16 px, trait 1.4</h2>
+    <div class="icon-grid" id="icon-demo"></div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Page d'erreur</h2>
+    <div class="error-page" style="min-height:0;border:1px dashed var(--line);border-radius:var(--r-lg)">
+      <p class="code">4<em>0</em>4</p>
+      <p class="sub">This page doesn't exist — or it moved without telling anyone.</p>
+      <a class="btn btn-ghost" href="#">← Back home</a>
+    </div>
+  </div>
+</div>
+<script>
+(function mount(tries) {
+  var DS = window.TheogalhDevDesignSystem_32f2b5;
+  if (!DS || !DS.SearchInput) { if ((tries || 0) < 20) setTimeout(function () { mount((tries || 0) + 1); }, 150); return; }
+  var e = React.createElement;
+  ReactDOM.createRoot(document.getElementById('search-demo')).render(e(DS.SearchInput, { placeholder: 'Search users, apps, tokens…', shortcut: '⌘K' }));
+  ReactDOM.createRoot(document.getElementById('spark-demo')).render(e(DS.Sparkline, { data: [4, 6, 5, 9, 7, 11, 10, 14, 12, 16] }));
+  ReactDOM.createRoot(document.getElementById('spark-demo-2')).render(e(DS.Sparkline, { data: [12, 10, 11, 9, 10, 8, 9, 7, 8, 7] }));
+  var names = ['chevron-down', 'chevron-right', 'chevron-left', 'arrow-left', 'arrow-right', 'x', 'plus', 'check', 'search', 'copy', 'external', 'trash', 'warn', 'info'];
+  ReactDOM.createRoot(document.getElementById('icon-demo')).render(names.map(function (n) {
+    return e('div', { className: 'icon-cell', key: n }, e(DS.Icon, { name: n }), e('span', null, n));
+  }));
+})(0);
+</script>
+</body>
+</html>

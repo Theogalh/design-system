@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Code & API" subtitle="Blocs de code, méthodes HTTP, kbd, thème Swagger UI" viewport="940x1000" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Code & API</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Code &amp; API</h1>
+  <p class="sub">Tout ce qui parle machine passe en mono, sur fond plus sombre que le reste.</p>
+  <hr class="hairline" />
+  <div class="block">
+    <h2 class="section-title">Endpoints — méthodes HTTP</h2>
+    <div style="display:grid;gap:10px">
+      <div class="endpoint"><span class="method get">GET</span><span>/v1/videos/{id}</span><span class="muted" style="font-family:var(--font-ui)">Fetch one video</span></div>
+      <div class="endpoint"><span class="method post">POST</span><span>/v1/videos/analyze</span><span class="muted" style="font-family:var(--font-ui)">Queue an analysis</span></div>
+      <div class="endpoint"><span class="method put">PUT</span><span>/v1/apps/{id}</span><span class="muted" style="font-family:var(--font-ui)">Update an app</span></div>
+      <div class="endpoint"><span class="method del">DELETE</span><span>/v1/tokens/{id}</span><span class="muted" style="font-family:var(--font-ui)">Revoke a token</span></div>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Code block</h2>
+    <div class="code-block">
+      <div class="code-head"><span>curl</span><button class="copy">copy</button></div>
+      <pre><span class="c-com"># queue an analysis</span>
+curl <span class="c-kw">-X POST</span> https://api.theogalh.dev/v1/videos/analyze \
+  <span class="c-kw">-H</span> <span class="c-str">"Authorization: Bearer $TOKEN"</span> \
+  <span class="c-kw">-d</span> <span class="c-str">'{"url": "https://youtube.com/watch?v=dQw4"}'</span></pre>
+    </div>
+    <div class="code-block" style="margin-top:12px">
+      <div class="code-head"><span>200 · application/json</span><button class="copy">copy</button></div>
+      <pre>{
+  <span class="c-str">"id"</span>: <span class="c-str">"an_8f2c"</span>,
+  <span class="c-str">"status"</span>: <span class="c-str">"queued"</span>,
+  <span class="c-str">"eta_seconds"</span>: <span class="c-num">45</span>
+}</pre>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Raccourcis — kbd</h2>
+    <div class="action-row" style="gap:20px">
+      <span><span class="key">⌘</span> <span class="key">K</span> <span class="muted">palette</span></span>
+      <span><span class="key">G</span> <span class="key">S</span> <span class="muted">go to settings</span></span>
+      <span><span class="key">esc</span> <span class="muted">fermer</span></span>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Swagger UI — FastAPI</h2>
+    <p class="muted" style="margin:0 0 10px">Le thème complet est dans <span class="mono">assets/swagger-theogalh.css</span> — il rethème /docs aux couleurs du système :</p>
+    <div class="code-block">
+      <div class="code-head"><span>main.py</span><button class="copy">copy</button></div>
+      <pre><span class="c-kw">from</span> fastapi.openapi.docs <span class="c-kw">import</span> get_swagger_ui_html
+
+<span class="c-kw">@app.get</span>(<span class="c-str">"/docs"</span>, include_in_schema=<span class="c-kw">False</span>)
+<span class="c-kw">def</span> docs():
+    <span class="c-kw">return</span> get_swagger_ui_html(
+        openapi_url=<span class="c-str">"/openapi.json"</span>, title=<span class="c-str">"theoapi — docs"</span>,
+        swagger_css_url=<span class="c-str">"/static/swagger-theogalh.css"</span>)</pre>
+    </div>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.code-head .copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var pre = b.closest('.code-block').querySelector('pre');
+    navigator.clipboard && navigator.clipboard.writeText(pre.textContent);
+    b.textContent = 'copied'; setTimeout(function () { b.textContent = 'copy'; }, 1200);
+  });
+});
+</script>
+</body>
+</html>

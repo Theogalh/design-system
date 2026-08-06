@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Tables" subtitle="Sélection, actions groupées, tri" viewport="940x640" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tables</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../_ds_bundle.js"></script>
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Tables</h1>
+  <p class="sub">Sélection par ligne, la barre d'actions n'apparaît que quand elle sert.</p>
+  <hr class="hairline" />
+  <div class="bulk-bar">
+    <span class="count">3 selected</span>
+    <span class="spacer"></span>
+    <button class="btn btn-ghost btn-sm">Export</button>
+    <button class="btn btn-danger btn-sm">Revoke</button>
+  </div>
+  <div class="ledger-scroll">
+    <table class="ledger">
+      <thead><tr>
+        <th class="cb"><input type="checkbox" checked /></th>
+        <th class="sortable sorted">Created <span class="arrow">▼</span></th>
+        <th class="sortable">Token</th>
+        <th class="sortable">Owner</th>
+        <th>Status</th>
+      </tr></thead>
+      <tbody>
+        <tr class="selected"><td class="cb"><input type="checkbox" checked /></td><td class="t">2026-08-01</td><td>ytp-cli</td><td>theo</td><td><span class="stamp ok">active</span></td></tr>
+        <tr class="selected"><td class="cb"><input type="checkbox" checked /></td><td class="t">2026-07-28</td><td>screen-upload</td><td>theo</td><td><span class="stamp ok">active</span></td></tr>
+        <tr class="selected"><td class="cb"><input type="checkbox" checked /></td><td class="t">2026-07-12</td><td>backup-agent</td><td>media_admin</td><td><span class="stamp warn">expiring</span></td></tr>
+        <tr><td class="cb"><input type="checkbox" /></td><td class="t">2026-06-30</td><td>ci-deploy</td><td>theo</td><td><span class="stamp ok">active</span></td></tr>
+        <tr><td class="cb"><input type="checkbox" /></td><td class="t">2026-05-14</td><td>old-import</td><td>theo</td><td><span class="stamp danger">revoked</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <hr class="hairline" />
+  <h2 class="section-title">DataTable — composant clé en main</h2>
+  <p class="muted" style="margin:0 0 12px">Tri, sélection, bulk actions et pagination gérés en props : <span class="mono">&lt;DataTable columns rows selectable pageSize bulkActions /&gt;</span></p>
+  <div id="dt-demo"></div>
+  <p class="muted" style="margin:16px 0 0">Classes : <span class="mono">.bulk-bar</span>, <span class="mono">td.cb</span>, <span class="mono">tr.selected</span>, <span class="mono">th.sortable</span>. Une action destructive dans la barre max, toujours en danger.</p>
+</div>
+<script>
+(function mount(tries) {
+  var DS = window.TheogalhDevDesignSystem_32f2b5;
+  if (!DS || !DS.DataTable) { if ((tries || 0) < 20) setTimeout(function () { mount((tries || 0) + 1); }, 150); return; }
+  var e = React.createElement;
+  ReactDOM.createRoot(document.getElementById('dt-demo')).render(e(DS.DataTable, {
+    rowKey: 'token', selectable: true, pageSize: 4,
+    columns: [
+      { key: 'created', label: 'Created', sortable: true },
+      { key: 'token', label: 'Token', sortable: true },
+      { key: 'owner', label: 'Owner', sortable: true },
+      { key: 'status', label: 'Status', render: function (r) { return e('span', { className: 'stamp ' + (r.status === 'active' ? 'ok' : r.status === 'expiring' ? 'warn' : 'danger') }, r.status); } }
+    ],
+    rows: [
+      { created: '2026-08-01', token: 'ytp-cli', owner: 'theo', status: 'active' },
+      { created: '2026-07-28', token: 'screen-upload', owner: 'theo', status: 'active' },
+      { created: '2026-07-12', token: 'backup-agent', owner: 'media_admin', status: 'expiring' },
+      { created: '2026-06-30', token: 'ci-deploy', owner: 'theo', status: 'active' },
+      { created: '2026-05-14', token: 'old-import', owner: 'theo', status: 'revoked' },
+      { created: '2026-04-02', token: 'legacy-sync', owner: 'media_admin', status: 'revoked' }
+    ],
+    bulkActions: [{ label: 'Export' }, { label: 'Revoke', danger: true }]
+  }));
+})(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Navigation" subtitle="Command palette ⌘K, theme switcher, mobile drawer" viewport="940x1060" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Navigation</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../_ds_bundle.js"></script>
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+  .pal-demo .palette-overlay { position: static; padding: 0; background: none; backdrop-filter: none; animation: none; display: block; }
+  .pal-demo .palette { max-width: 520px; }
+  .drawer-demo { position: relative; height: 300px; border: 1px solid var(--line-soft); border-radius: var(--r-lg); overflow: hidden; background: var(--ink); }
+  .drawer-demo .drawer-overlay, .drawer-demo .drawer { position: absolute; animation: none; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Navigation</h1>
+  <p class="sub">Aller vite : palette de commandes au clavier, thème persistant, drawer mobile.</p>
+  <hr class="hairline" />
+  <div class="block pal-demo">
+    <h2 class="section-title">Command palette — ⌘K</h2>
+    <div class="palette-overlay">
+      <div class="palette">
+        <div class="pal-input">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="7" cy="7" r="4"></circle><line x1="10" y1="10" x2="13.5" y2="13.5"></line></svg>
+          <input placeholder="Search or run a command…" value="tok" readonly />
+        </div>
+        <div class="palette-list">
+          <div class="pal-group">Actions</div>
+          <button class="pal-item active">Create API token<span class="hint">T</span></button>
+          <button class="pal-item">Revoke all tokens</button>
+          <div class="pal-group">Go to</div>
+          <button class="pal-item">Tokens — settings<span class="hint">G S</span></button>
+        </div>
+        <div class="pal-foot"><span>↑↓ navigate</span><span>↵ run</span><span>esc close</span></div>
+      </div>
+    </div>
+    <p class="muted" style="margin:12px 0 0">Composant <span class="mono">CommandPalette</span> : hotkey ⌘K/Ctrl+K, filtrage, groupes, navigation clavier.</p>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Theme switcher — persistant</h2>
+    <div class="action-row">
+      <span id="ts-demo"></span>
+      <span class="muted">Bascule <span class="mono">data-theme</span> et retient le choix (localStorage).</span>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Mobile drawer — sous 600 px</h2>
+    <div class="drawer-demo">
+      <header class="topbar" style="padding:0 20px">
+        <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+        <button class="burger" style="display:inline-flex" aria-label="Menu"><span></span><span></span><span></span></button>
+      </header>
+      <div class="drawer-overlay"></div>
+      <nav class="drawer">
+        <div class="drawer-head">
+          <span class="rail-title" style="padding:0">Menu</span>
+          <button class="burger" style="display:inline-flex;border:none" aria-label="Close"><span style="transform:rotate(45deg) translateY(4px)"></span><span style="transform:rotate(-45deg) translateY(-4px)"></span></button>
+        </div>
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Apps</a>
+        <a href="#">Admin</a>
+        <a href="#">Settings</a>
+      </nav>
+    </div>
+    <p class="muted" style="margin:12px 0 0">Le topbar remplace la nav par le burger sous 600 px (<span class="mono">.nav.collapsible</span> + <span class="mono">.burger</span>) ; le drawer glisse depuis la droite.</p>
+  </div>
+</div>
+<script>
+(function mount(tries) {
+  var DS = window.TheogalhDevDesignSystem_32f2b5;
+  if (!DS || !DS.ThemeSwitcher) { if ((tries || 0) < 20) setTimeout(function () { mount((tries || 0) + 1); }, 150); return; }
+  ReactDOM.createRoot(document.getElementById('ts-demo')).render(React.createElement(DS.ThemeSwitcher, { target: 'body', storageKey: 'tg-theme-card' }));
+})(0);
+</script>
+</body>
+</html>

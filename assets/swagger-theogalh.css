@@ -1,0 +1,83 @@
+/* swagger-theogalh.css — thème theogalh.dev pour Swagger UI (FastAPI)
+   Usage FastAPI :
+   from fastapi.openapi.docs import get_swagger_ui_html
+   @app.get("/docs", include_in_schema=False)
+   def docs():
+       return get_swagger_ui_html(openapi_url="/openapi.json", title="theoapi — docs",
+           swagger_css_url="/static/swagger-theogalh.css") */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+:root{--ink:#0b0c10;--panel:#14161d;--panel2:#1a1d27;--line:#262b37;--linesoft:#1f2430;--text:#edeef3;--muted:#8d93a5;--faint:#767d90;--peri:#8b93f8;--perihi:#a7adff;--peribtn:#6a72f2;--ok:#5bc99b;--warn:#e5c558;--bad:#f07567}
+html,body{background:var(--ink)!important}
+.swagger-ui{font-family:"Instrument Sans",system-ui,sans-serif;color:var(--text)}
+.swagger-ui .topbar{display:none}
+.swagger-ui .wrapper{max-width:1100px}
+.swagger-ui .info{margin:36px 0}
+.swagger-ui .info .title,.swagger-ui .info h1,.swagger-ui .info h2,.swagger-ui .info h3{font-family:"Space Grotesk",sans-serif;color:var(--text)}
+.swagger-ui .info .title small{background:var(--panel2)}
+.swagger-ui .info .title small pre{color:var(--muted);font-family:"IBM Plex Mono",monospace}
+.swagger-ui .info p,.swagger-ui .info li{color:var(--muted)}
+.swagger-ui .info a{color:var(--peri)}
+.swagger-ui .info a:hover{color:var(--perihi)}
+.swagger-ui .scheme-container{background:var(--panel);box-shadow:none;border:1px solid var(--linesoft);border-radius:12px;padding:16px 20px;margin:0 0 20px}
+.swagger-ui .servers>label select,.swagger-ui select{background:var(--ink);border:1px solid var(--line);color:var(--text);border-radius:8px;font-family:"Instrument Sans",sans-serif}
+.swagger-ui .opblock-tag{color:var(--text);border-bottom:1px solid var(--linesoft);font-family:"Space Grotesk",sans-serif;font-size:18px}
+.swagger-ui .opblock-tag:hover{background:var(--panel)}
+.swagger-ui .opblock-tag small{color:var(--muted);font-family:"Instrument Sans",sans-serif}
+.swagger-ui .opblock{background:var(--panel);border:1px solid var(--linesoft);border-radius:10px;box-shadow:none;margin-bottom:10px}
+.swagger-ui .opblock .opblock-summary{border:none}
+.swagger-ui .opblock .opblock-summary-path,.swagger-ui .opblock .opblock-summary-path__deprecated{color:var(--text);font-family:"IBM Plex Mono",monospace;font-size:14px}
+.swagger-ui .opblock .opblock-summary-description{color:var(--muted)}
+.swagger-ui .opblock .opblock-summary-method{border-radius:6px;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:12px;min-width:72px;text-shadow:none}
+.swagger-ui .opblock.opblock-get{border-color:rgba(91,201,155,.35)}
+.swagger-ui .opblock.opblock-get .opblock-summary-method{background:transparent;border:1px solid rgba(91,201,155,.5);color:var(--ok)}
+.swagger-ui .opblock.opblock-post{border-color:rgba(139,147,248,.4)}
+.swagger-ui .opblock.opblock-post .opblock-summary-method{background:transparent;border:1px solid rgba(139,147,248,.55);color:var(--perihi)}
+.swagger-ui .opblock.opblock-put,.swagger-ui .opblock.opblock-patch{border-color:rgba(229,197,88,.35)}
+.swagger-ui .opblock.opblock-put .opblock-summary-method,.swagger-ui .opblock.opblock-patch .opblock-summary-method{background:transparent;border:1px solid rgba(229,197,88,.5);color:var(--warn)}
+.swagger-ui .opblock.opblock-delete{border-color:rgba(240,117,103,.35)}
+.swagger-ui .opblock.opblock-delete .opblock-summary-method{background:transparent;border:1px solid rgba(240,117,103,.5);color:var(--bad)}
+.swagger-ui .opblock .opblock-section-header{background:var(--panel2);box-shadow:none;border-radius:0}
+.swagger-ui .opblock .opblock-section-header h4,.swagger-ui .opblock .opblock-section-header label{color:var(--text)}
+.swagger-ui .opblock-description-wrapper p,.swagger-ui .opblock-external-docs-wrapper p,.swagger-ui .opblock-title_normal p{color:var(--muted)}
+.swagger-ui .parameter__name,.swagger-ui .parameter__type,.swagger-ui table thead tr td,.swagger-ui table thead tr th{color:var(--text);font-family:"IBM Plex Mono",monospace;font-size:12.5px;border-bottom:1px solid var(--line)}
+.swagger-ui .parameter__name.required::after{color:var(--bad)}
+.swagger-ui .parameter__in,.swagger-ui .parameter__deprecated{color:var(--faint);font-family:"IBM Plex Mono",monospace}
+.swagger-ui td,.swagger-ui th{color:var(--muted)}
+.swagger-ui .response-col_status{color:var(--text);font-family:"IBM Plex Mono",monospace}
+.swagger-ui .response-col_links{color:var(--faint)}
+.swagger-ui .responses-inner h4,.swagger-ui .responses-inner h5{color:var(--text)}
+.swagger-ui .btn{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:8px;box-shadow:none;font-family:"Instrument Sans",sans-serif;font-weight:600}
+.swagger-ui .btn:hover{border-color:var(--peri);color:var(--perihi)}
+.swagger-ui .btn.execute{background:var(--peribtn);border-color:var(--peribtn);color:#fff}
+.swagger-ui .btn.execute:hover{background:var(--peri)}
+.swagger-ui .btn.cancel{border-color:rgba(240,117,103,.45);color:var(--bad)}
+.swagger-ui .btn.authorize{border-color:rgba(91,201,155,.45);color:var(--ok)}
+.swagger-ui .btn.authorize svg{fill:var(--ok)}
+.swagger-ui input[type=text],.swagger-ui input[type=password],.swagger-ui input[type=email],.swagger-ui textarea{background:var(--ink);border:1px solid var(--line);color:var(--text);border-radius:8px}
+.swagger-ui input[type=text]:focus,.swagger-ui textarea:focus{border-color:var(--peri);outline:none}
+.swagger-ui .highlight-code,.swagger-ui .microlight,.swagger-ui pre.microlight{background:#07080c!important;color:var(--text);font-family:"IBM Plex Mono",monospace!important;border-radius:8px}
+.swagger-ui .copy-to-clipboard{background:var(--panel2);border:1px solid var(--line);border-radius:6px}
+.swagger-ui .copy-to-clipboard button{background:none}
+.swagger-ui section.models{border:1px solid var(--linesoft);border-radius:12px}
+.swagger-ui section.models.is-open h4{border-bottom:1px solid var(--linesoft)}
+.swagger-ui section.models h4,.swagger-ui section.models h5{color:var(--text);font-family:"Space Grotesk",sans-serif}
+.swagger-ui .model-container,.swagger-ui .model-box{background:var(--panel);border-radius:8px}
+.swagger-ui .model,.swagger-ui .model-title{color:var(--text);font-family:"IBM Plex Mono",monospace}
+.swagger-ui .prop-type{color:var(--peri)}
+.swagger-ui .prop-format{color:var(--faint)}
+.swagger-ui .model .property.primitive{color:var(--muted)}
+.swagger-ui .dialog-ux .modal-ux{background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.swagger-ui .dialog-ux .modal-ux-header h3,.swagger-ui .dialog-ux .modal-ux-content h4,.swagger-ui .dialog-ux .modal-ux-content p,.swagger-ui .dialog-ux .modal-ux-content label{color:var(--text)}
+.swagger-ui .dialog-ux .modal-ux-header{border-bottom:1px solid var(--linesoft)}
+.swagger-ui .auth-container{border-bottom:1px solid var(--linesoft)}
+.swagger-ui .auth-container .wrapper{background:transparent}
+.swagger-ui .tab li{color:var(--muted)}
+.swagger-ui .tab li.active{color:var(--text)}
+.swagger-ui .opblock-body pre.microlight span{color:inherit!important}
+.swagger-ui .download-contents{background:var(--panel2);color:var(--text)}
+.swagger-ui .loading-container .loading::before{border-color:var(--peri) transparent}
+.swagger-ui ::placeholder{color:var(--faint)}
+.swagger-ui svg{fill:var(--muted)}
+.swagger-ui .expand-operation svg,.swagger-ui .arrow{fill:var(--muted)}
+.swagger-ui .markdown p,.swagger-ui .markdown li{color:var(--muted)}
+.swagger-ui .markdown code,.swagger-ui .renderedMarkdown code{background:var(--panel2);color:var(--perihi);font-family:"IBM Plex Mono",monospace}

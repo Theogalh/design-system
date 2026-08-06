@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="ytp — Accueil" subtitle="URL analyse, chips, formats & téléchargement" viewport="1360x950" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ytp — Accueil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .hero { max-width: 680px; margin: 0 auto; padding: 64px 24px 48px; text-align: center; }
+  .hero .lead { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+  .url-bar { display: flex; gap: 10px; }
+  .url-bar input { flex: 1; }
+  .chips-cloud { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 14px; }
+  .result-card { max-width: 680px; margin: 0 auto; padding: 0 24px 64px; }
+  .fmt { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+  .fmt:last-child { border-bottom: none; }
+  .fmt .q { font-family: var(--font-mono); font-size: 13px; width: 84px; color: var(--text); }
+  .fmt .d { flex: 1; color: var(--muted); font-size: 13px; }
+  .thumb { width: 128px; height: 72px; border-radius: var(--r-md); background: var(--panel-2); border: 1px solid var(--line); flex: none; display: grid; place-items: center; color: var(--faint); font-family: var(--font-mono); font-size: 11px; }
+</style>
+<header class="topbar">
+  <a class="wordmark" href="#">ytp<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#">Historique</a>
+    <a href="#">Statistiques</a>
+  </nav>
+</header>
+<div class="hero">
+  <p class="lead">Téléchargez n'importe quelle vidéo — YouTube, Vimeo, TikTok et +1000 sites.</p>
+  <div class="url-bar">
+    <input type="text" placeholder="https://www.youtube.com/watch?v=…" />
+    <button class="btn btn-ghost">Coller</button>
+    <button class="btn btn-primary">Analyser</button>
+  </div>
+  <p class="eyebrow" style="margin-top:32px">Fonctionne aussi avec</p>
+  <div class="chips-cloud">
+    <a class="chip" href="#">Vimeo</a>
+    <a class="chip" href="#">Twitch</a>
+    <a class="chip" href="#">Twitter / X</a>
+    <a class="chip" href="#">Instagram</a>
+    <a class="chip" href="#">TikTok</a>
+    <a class="chip" href="#">SoundCloud</a>
+    <a class="chip" href="#">Dailymotion</a>
+    <a class="chip" href="#">Reddit</a>
+    <a class="chip" href="#">Arte</a>
+    <a class="chip accent" href="#">+ 1000 sites</a>
+  </div>
+</div>
+<div class="result-card">
+  <div class="panel">
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <div class="thumb">16:9</div>
+      <div style="min-width:0;flex:1">
+        <h2 class="section-title" style="margin-bottom:2px">Comment fonctionne une API OAuth2 — explication complète</h2>
+        <span class="row-sub">youtube.com · 18:42 · 1080p max</span>
+      </div>
+    </div>
+    <hr class="hairline" style="margin:16px 0" />
+    <div class="fmt">
+      <span class="q">1080p</span>
+      <span class="d">MP4 · vidéo + audio · ~312 Mo</span>
+      <button class="btn btn-ghost btn-sm">Rogner</button>
+      <button class="btn btn-primary btn-sm">Télécharger</button>
+    </div>
+    <div class="fmt">
+      <span class="q">720p</span>
+      <span class="d">MP4 · vidéo + audio · ~168 Mo</span>
+      <button class="btn btn-ghost btn-sm">Rogner</button>
+      <button class="btn btn-primary btn-sm">Télécharger</button>
+    </div>
+    <div class="fmt">
+      <span class="q">audio</span>
+      <span class="d">M4A · audio seul · ~17 Mo</span>
+      <span></span>
+      <button class="btn btn-primary btn-sm">Télécharger</button>
+    </div>
+  </div>
+  <p class="muted" style="text-align:center;margin-top:24px;font-size:13px">Propulsé par <a href="#" style="color:var(--muted)">yt-dlp</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Admin shell" description="Topbar + rail latéral + zone de contenu, responsive (rail → chips sous 900px)" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div>
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#" class="active">Admin</a>
+    <a href="#">Docs</a>
+    <button class="logout">Log out</button>
+  </nav>
+</header>
+<div class="admin-wrap">
+  <a class="admin-back" href="#">← Back to dashboard</a>
+  <div class="admin-layout">
+    <aside class="rail">
+      <div class="rail-group">
+        <div class="rail-title">Manage</div>
+        <a href="#" class="active">Overview</a>
+        <a href="#">Users</a>
+        <a href="#">Apps</a>
+        <a href="#">Audit log</a>
+      </div>
+      <div class="rail-group">
+        <div class="rail-title">Settings</div>
+        <a href="#">General</a>
+        <a href="#">Security</a>
+      </div>
+    </aside>
+    <main>
+      <div class="page-head anim-rise">
+        <p class="eyebrow">admin · overview</p>
+        <h1 class="display">Page title</h1>
+        <p class="sub">One line describing what this page manages.</p>
+      </div>
+      <div class="panel anim-rise">
+        <h2 class="section-title">Section</h2>
+        <p class="muted">Replace this panel with the page content — a ledger, a split master-detail, or a form.</p>
+      </div>
+    </main>
+  </div>
+</div>
+<footer class="footer">theogalh.dev · admin</footer>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Surfaces" subtitle="Top bar, rows, plates, dropzone, app cards" viewport="940x1120" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Surfaces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0 24px; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Surfaces</h1>
+  <p class="sub">Panels sit one step above the ink. Rows select, plates identify, dropzones invite.</p>
+
+  <hr class="hairline" />
+
+  <div class="block">
+    <h2 class="section-title">Top bar</h2>
+    <div style="border:1px solid var(--line-soft);border-radius:var(--r-lg);overflow:hidden">
+      <header class="topbar">
+        <a class="wordmark" href="#">theoapi<span class="dot"></span></a>
+        <nav class="nav">
+          <a href="#" class="active">Apps</a>
+          <a href="#">Admin</a>
+          <a href="#">Profile</a>
+          <button class="logout">Logout</button>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Selectable rows</h2>
+    <div class="row-list" style="max-width:360px">
+      <button class="row-card active">
+        <span class="avatar">T</span>
+        <span class="row-main">
+          <span class="row-title">theogalh</span><br />
+          <span class="row-sub">theogalh.dev@gmail.com</span>
+        </span>
+        <span class="dot"></span>
+      </button>
+      <button class="row-card">
+        <span class="avatar">M</span>
+        <span class="row-main">
+          <span class="row-title">marie</span><br />
+          <span class="row-sub">marie@example.com</span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Plates — identifiers</h2>
+    <div class="action-row">
+      <span class="plate">user:8f3d21c7-4b0e</span>
+      <span class="plate">app:jellyfin</span>
+      <span class="plate">client_1yq9…d41f</span>
+    </div>
+    <p class="muted" style="margin:10px 0 0">Any ID a human might copy is a plate: mono, bordered, periwinkle notch.</p>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Dropzone</h2>
+    <div class="dropzone" style="max-width:520px">
+      <div class="dz-title"><strong>Click to upload</strong> or drag &amp; drop</div>
+      <div class="dz-hint">PNG, JPEG, WebP, GIF — max 50 MB</div>
+      <div class="dz-fine">Screenshots are automatically deleted after 7 days</div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">App cards</h2>
+    <div class="apps-grid" style="max-width:560px">
+      <div class="app-card">
+        <div class="head"><span class="applogo">J</span><h3>Jellyfin</h3></div>
+        <p>Your media server, linked to your account.</p>
+        <a class="open" href="#">Open app →</a>
+      </div>
+      <div class="app-card">
+        <div class="head"><span class="applogo">Y</span><h3>ytp</h3></div>
+        <p>Download any video from 1000+ sites.</p>
+        <a class="open" href="#">Open app →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Controls" subtitle="Buttons, fields, tabs, segmented, chips" viewport="940x1050" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Controls</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+  .form-demo { max-width: 380px; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Controls</h1>
+  <p class="sub">Buttons say what they do. One filled action per view; everything else is quiet.</p>
+
+  <hr class="hairline" />
+
+  <div class="block">
+    <h2 class="section-title">Buttons</h2>
+    <div class="action-row">
+      <button class="btn btn-primary">Analyser</button>
+      <button class="btn btn-ghost">Change password</button>
+      <button class="btn btn-danger">Delete account</button>
+      <button class="btn btn-primary" disabled>Upload</button>
+      <button class="btn btn-ghost btn-sm">Revoke</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Fields</h2>
+    <div class="form form-demo">
+      <div class="field">
+        <label class="field-label" for="c-email">Email</label>
+        <input id="c-email" type="email" placeholder="you@example.com" />
+      </div>
+      <div class="field">
+        <label class="field-label" for="c-url">Video URL</label>
+        <input id="c-url" type="text" value="https://www.youtube.com/watch?v=dQw4" style="border-color:var(--peri);box-shadow:0 0 0 3px var(--peri-dim)" />
+      </div>
+      <div class="field">
+        <label class="field-label" for="c-pass">Password</label>
+        <input id="c-pass" type="password" value="secret" class="invalid" />
+        <span class="field-error">Password must be at least 12 characters.</span>
+      </div>
+      <div class="field">
+        <label class="field-label" for="c-role">Role</label>
+        <select id="c-role"><option>media_admin</option></select>
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" checked />
+        <span>Public client (native app / CLI — no client secret, PKCE only)</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Segmented control</h2>
+    <div class="action-row">
+      <div class="seg">
+        <button class="active">Public</button>
+        <button>Private</button>
+      </div>
+      <span class="muted">Shown in gallery</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Tabs</h2>
+    <div class="tabs" style="margin-bottom:0;max-width:380px">
+      <button class="tab active">Email</button>
+      <button class="tab">Google</button>
+      <button class="tab">Jellyfin</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Chips</h2>
+    <div class="action-row">
+      <a class="chip" href="#">Vimeo</a>
+      <a class="chip" href="#">Twitch</a>
+      <a class="chip" href="#">TikTok</a>
+      <a class="chip" href="#">SoundCloud</a>
+      <a class="chip accent" href="#">+ 1000 sites</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

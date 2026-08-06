@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Feedback" subtitle="Switch, pagination, skeleton, stat cards" viewport="940x880" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feedback</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Feedback</h1>
+  <p class="sub">State you can read at a glance: on/off, where you are, what's loading, how much.</p>
+  <hr class="hairline" />
+  <div class="block">
+    <h2 class="section-title">Switch</h2>
+    <div class="action-row" style="gap:24px">
+      <label class="switch"><input type="checkbox" checked /><span class="track"></span><span>Public gallery</span></label>
+      <label class="switch"><input type="checkbox" /><span class="track"></span><span>Email digests</span></label>
+      <label class="switch"><input type="checkbox" disabled /><span class="track"></span><span class="muted">Requires verification</span></label>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Pagination</h2>
+    <nav class="pager" aria-label="Pagination">
+      <button disabled>‹</button>
+      <button>1</button>
+      <button class="ellipsis" disabled>…</button>
+      <button>41</button>
+      <button class="active">42</button>
+      <button>43</button>
+      <button class="ellipsis" disabled>…</button>
+      <button>96</button>
+      <button>›</button>
+    </nav>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Skeleton — loading</h2>
+    <div style="display:flex;gap:12px;align-items:center;max-width:380px">
+      <span class="skel circle" style="display:block;width:36px;height:36px"></span>
+      <div style="flex:1;display:grid;gap:8px">
+        <span class="skel line" style="display:block;width:60%"></span>
+        <span class="skel line" style="display:block;width:90%"></span>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <h2 class="section-title">Stat cards</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-label">Requests / day</span><span class="stat-value">12,480</span><span class="stat-delta up">▲ 8.2%</span></div>
+      <div class="stat-card"><span class="stat-label">Active tokens</span><span class="stat-value">37</span><span class="stat-delta">— stable</span></div>
+      <div class="stat-card"><span class="stat-label">Failed logins</span><span class="stat-value">214</span><span class="stat-delta down">▼ 12%</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

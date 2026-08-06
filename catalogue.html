@@ -1,0 +1,128 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Catalogue" subtitle="Tous les composants, leurs noms et leurs classes CSS" viewport="1280x2400" -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catalogue — theogalh.dev</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 40px 60px; }
+  .cat { display: grid; grid-template-columns: 220px 1fr; gap: 0; border: 1px solid var(--line-soft); border-radius: var(--r-lg); overflow: hidden; }
+  .cat > div { padding: 18px 20px; border-bottom: 1px solid var(--line-soft); }
+  .cat > div:nth-last-child(-n+2) { border-bottom: none; }
+  .cat .id { background: var(--panel); display: grid; gap: 4px; align-content: start; }
+  .cat .id b { font-size: 14px; font-weight: 600; }
+  .cat .id code { font-family: var(--font-mono); font-size: 11.5px; color: var(--peri-hi); }
+  .cat .id span { font-family: var(--font-mono); font-size: 11px; color: var(--faint); }
+  .cat .demo { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  h2.grp { font-family: var(--font-display); font-size: 20px; margin: 40px 0 14px; }
+  @media (max-width: 700px) { .cat { grid-template-columns: 1fr; } .cat .id { border-bottom: 1px dashed var(--line-soft); } }
+</style>
+<header class="topbar">
+  <a class="wordmark" href="index.html">theogalh<span class="dot"></span></a>
+  <nav class="nav"><a href="index.html">Accueil</a><a href="#" class="active">Catalogue</a></nav>
+</header>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · catalogue</p>
+  <h1 class="display">Tous les composants</h1>
+  <p class="sub">Nom React (montable via le bundle), classes CSS (utilisables sans React), et rendu.</p>
+
+  <h2 class="grp">Actions &amp; saisie</h2>
+  <div class="cat">
+    <div class="id"><b>Button</b><code>&lt;Button variant size /&gt;</code><span>.btn .btn-primary .btn-ghost .btn-danger .btn-sm</span></div>
+    <div class="demo"><button class="btn btn-primary">Analyser</button><button class="btn btn-ghost">Cancel</button><button class="btn btn-danger">Delete</button><button class="btn btn-ghost btn-sm">Small</button></div>
+    <div class="id"><b>Champs</b><code>—</code><span>.form .field .field-label input select .invalid .field-error</span></div>
+    <div class="demo" style="max-width:320px"><input placeholder="you@example.com" /></div>
+    <div class="id"><b>Switch</b><code>&lt;Switch checked label /&gt;</code><span>.switch .track</span></div>
+    <div class="demo"><label class="switch"><input type="checkbox" checked /><span class="track"></span><span>Public</span></label></div>
+    <div class="id"><b>SearchInput</b><code>&lt;SearchInput shortcut /&gt;</code><span>.search .search-ico kbd</span></div>
+    <div class="demo" style="max-width:320px"><span class="search" style="width:100%"><span class="search-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="7" cy="7" r="4"></circle><line x1="10" y1="10" x2="13.5" y2="13.5"></line></svg></span><input placeholder="Search…" /><kbd>⌘K</kbd></span></div>
+    <div class="id"><b>Segmented</b><code>—</code><span>.seg button.active</span></div>
+    <div class="demo"><span class="seg"><button class="active">Public</button><button>Private</button></span></div>
+    <div class="id"><b>Tabs</b><code>—</code><span>.tabs .tab.active</span></div>
+    <div class="demo"><span class="tabs" style="margin:0;border:none"><button class="tab active">Email</button><button class="tab">Google</button></span></div>
+    <div class="id"><b>Dropdown</b><code>&lt;Dropdown label items /&gt;</code><span>.menu-wrap .menu .danger .sep</span></div>
+    <div class="demo"><span class="menu" style="position:static;display:inline-grid;animation:none"><button>Rename</button><button class="danger">Revoke</button></span></div>
+  </div>
+
+  <h2 class="grp">Statut &amp; identité</h2>
+  <div class="cat">
+    <div class="id"><b>Dot</b><code>&lt;Dot tone pulse /&gt;</code><span>.dot .ok .warn .bad .faint .pulse</span></div>
+    <div class="demo"><span class="dot"></span><span class="dot ok"></span><span class="dot warn"></span><span class="dot bad"></span><span class="dot pulse"></span></div>
+    <div class="id"><b>Stamp</b><code>&lt;Stamp tone /&gt;</code><span>.stamp .ok .warn .danger</span></div>
+    <div class="demo"><span class="stamp ok">verified</span><span class="stamp warn">pending</span><span class="stamp danger">revoked</span></div>
+    <div class="id"><b>Chip</b><code>&lt;Chip accent /&gt;</code><span>.chip .accent</span></div>
+    <div class="demo"><a class="chip" href="#">Vimeo</a><a class="chip accent" href="#">+ 1000 sites</a></div>
+    <div class="id"><b>Plate</b><code>—</code><span>.plate</span></div>
+    <div class="demo"><span class="plate">v1.4.0</span><span class="plate">an_8f2c</span></div>
+    <div class="id"><b>Method</b><code>—</code><span>.method .get .post .put .del</span></div>
+    <div class="demo"><span class="method get">GET</span><span class="method post">POST</span><span class="method put">PUT</span><span class="method del">DELETE</span></div>
+    <div class="id"><b>Avatar / Applogo</b><code>—</code><span>.avatar .applogo</span></div>
+    <div class="demo"><span class="avatar">T</span><span class="applogo">Y</span></div>
+    <div class="id"><b>Key</b><code>—</code><span>.key</span></div>
+    <div class="demo"><span class="key">⌘</span><span class="key">K</span><span class="key">esc</span></div>
+  </div>
+
+  <h2 class="grp">Feedback &amp; overlays</h2>
+  <div class="cat">
+    <div class="id"><b>Modal</b><code>&lt;Modal open title danger /&gt;</code><span>.modal-overlay .modal .modal-actions</span></div>
+    <div class="demo"><span class="modal" style="max-width:300px;padding:16px;animation:none"><b style="font-family:var(--font-display)">Delete account</b><span class="muted" style="display:block;margin:6px 0 12px;font-size:13px">This cannot be undone.</span><span class="modal-actions"><button class="btn btn-ghost btn-sm">Cancel</button><button class="btn btn-danger btn-sm">Delete</button></span></span></div>
+    <div class="id"><b>Toast</b><code>&lt;Toast tone /&gt;</code><span>.toast-stack .toast .ok .bad .toast-close</span></div>
+    <div class="demo"><span class="toast ok" style="animation:none"><span class="dot ok"></span>API key regenerated.<button class="toast-close">×</button></span></div>
+    <div class="id"><b>Tooltip</b><code>&lt;Tooltip label /&gt;</code><span>.tip .tip-body</span></div>
+    <div class="demo" style="padding-top:30px"><span class="tip"><button class="btn btn-ghost btn-sm">client_id</button><span class="tip-body" style="opacity:1;transform:translateX(-50%)">Copy</span></span></div>
+    <div class="id"><b>Skeleton</b><code>&lt;Skeleton variant /&gt;</code><span>.skel .line .circle</span></div>
+    <div class="demo" style="flex:1"><span class="skel circle" style="display:block;width:28px;height:28px"></span><span class="skel line" style="display:block;flex:1;max-width:200px"></span></div>
+    <div class="id"><b>Pagination</b><code>&lt;Pagination page pages /&gt;</code><span>.pager .active .ellipsis</span></div>
+    <div class="demo"><nav class="pager"><button>‹</button><button>1</button><button class="active">2</button><button>3</button><button>›</button></nav></div>
+    <div class="id"><b>UploadProgress</b><code>&lt;UploadProgress items /&gt;</code><span>.up-list .up-item .up-track .up-fill .done .error</span></div>
+    <div class="demo" style="flex:1"><span class="up-item" style="flex:1;max-width:320px"><span class="up-head"><span class="dot pulse"></span><span class="up-name">concert-4k.mp4</span><span class="up-meta">62%</span></span><span class="up-track"><span class="up-fill" style="width:62%"></span></span></span></div>
+  </div>
+
+  <h2 class="grp">Data &amp; contenu</h2>
+  <div class="cat">
+    <div class="id"><b>StatCard</b><code>&lt;StatCard label value delta trend /&gt;</code><span>.stat-card .stat-label .stat-value .stat-delta .up .down</span></div>
+    <div class="demo"><span class="stat-card" style="min-width:170px"><span class="stat-label">Requests</span><span class="stat-value">12,480</span><span class="stat-delta up">▲ 8.2%</span></span></div>
+    <div class="id"><b>BarChart</b><code>&lt;BarChart data unit /&gt;</code><span>.bars .bar-row .bar-track .bar-fill .bar-val</span></div>
+    <div class="demo" style="flex:1"><span class="bars" style="flex:1;max-width:380px"><span class="bar-row"><span class="bar-label">ytp</span><span class="bar-track"><span class="bar-fill" style="width:100%"></span></span><span class="bar-val">8,420</span></span><span class="bar-row"><span class="bar-label">screen</span><span class="bar-track"><span class="bar-fill" style="width:35%"></span></span><span class="bar-val">2,960</span></span></span></div>
+    <div class="id"><b>Donut</b><code>&lt;Donut data size /&gt;</code><span>.viz-legend .swatch .lg-val</span></div>
+    <div class="demo"><svg width="72" height="72" viewBox="0 0 72 72" style="transform:rotate(-90deg)"><circle cx="36" cy="36" r="28" fill="none" stroke="var(--panel-2)" stroke-width="10"></circle><circle cx="36" cy="36" r="28" fill="none" stroke="var(--peri)" stroke-width="10" stroke-dasharray="120 56"></circle><circle cx="36" cy="36" r="28" fill="none" stroke="var(--ok)" stroke-width="10" stroke-dasharray="40 136" stroke-dashoffset="-122"></circle></svg><span class="viz-legend"><span class="lg-row"><span class="swatch" style="background:var(--peri)"></span>Video<span class="lg-val">68%</span></span><span class="lg-row"><span class="swatch" style="background:var(--ok)"></span>Images<span class="lg-val">23%</span></span></span></div>
+    <div class="id"><b>Sparkline</b><code>&lt;Sparkline data /&gt;</code><span>.spark</span></div>
+    <div class="demo"><svg class="spark" width="120" height="32" viewBox="0 0 120 32"><polyline points="0,26 15,20 30,23 45,12 60,16 75,7 90,10 105,4 120,6"></polyline></svg></div>
+    <div class="id"><b>DataTable</b><code>&lt;DataTable columns rows selectable pageSize /&gt;</code><span>tri + sélection + bulk + pagination en props</span></div>
+    <div class="demo"><a class="chip" href="components/tables.html">démo interactive →</a></div>
+    <div class="id"><b>Ledger</b><code>—</code><span>.ledger .ledger-scroll th.sortable tr.selected td.cb .bulk-bar</span></div>
+    <div class="demo" style="flex:1"><table class="ledger" style="max-width:380px"><thead><tr><th class="sortable sorted">Time <span class="arrow">▼</span></th><th>Action</th></tr></thead><tbody><tr class="selected"><td class="t">18:42</td><td>token.create</td></tr><tr><td class="t">17:05</td><td>upload.finish</td></tr></tbody></table></div>
+    <div class="id"><b>LogViewer</b><code>&lt;LogViewer lines title /&gt;</code><span>.logview .log-line .lt .lv .lm</span></div>
+    <div class="demo" style="flex:1"><span class="logview" style="flex:1;max-width:420px"><span class="log-body" style="padding:8px 0;display:block"><span class="log-line"><span class="lt">18:42</span><span class="lv ok">OK</span><span class="lm">download complete</span></span><span class="log-line"><span class="lt">18:44</span><span class="lv err">ERR</span><span class="lm">ffmpeg exit 1</span></span></span></span></div>
+    <div class="id"><b>PlayerBar</b><code>&lt;PlayerBar duration position /&gt;</code><span>.player .p-btn .p-scrub .p-prog .p-handle .p-rate</span></div>
+    <div class="demo" style="flex:1"><span class="player" style="flex:1;max-width:420px"><button class="p-btn"><svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor"><rect x="1" y="1" width="3.5" height="12" rx="1"></rect><rect x="7.5" y="1" width="3.5" height="12" rx="1"></rect></svg></button><span class="p-time">5:12</span><span class="p-scrub"><span class="p-prog" style="width:41%"></span><span class="p-handle" style="left:41%"></span></span><span class="p-time">12:34</span><button class="p-rate">1.5×</button></span></div>
+    <div class="id"><b>Code block</b><code>—</code><span>.code-block .code-head .copy .c-kw .c-str .c-num .c-com</span></div>
+    <div class="demo" style="flex:1"><span class="code-block" style="flex:1;max-width:420px;display:block"><span class="code-head"><span>curl</span></span><pre>curl <span class="c-kw">-X POST</span> <span class="c-str">"…/analyze"</span></pre></span></div>
+  </div>
+
+  <h2 class="grp">Navigation &amp; structure</h2>
+  <div class="cat">
+    <div class="id"><b>Breadcrumb</b><code>&lt;Breadcrumb items /&gt;</code><span>.crumbs .sep .current</span></div>
+    <div class="demo"><nav class="crumbs"><a href="#">Admin</a><span class="sep">/</span><span class="current">ytp</span></nav></div>
+    <div class="id"><b>CommandPalette</b><code>&lt;CommandPalette items hotkey /&gt;</code><span>.palette .pal-input .palette-list .pal-item .pal-foot</span></div>
+    <div class="demo"><a class="chip" href="components/navigation.html">démo complète →</a></div>
+    <div class="id"><b>ThemeSwitcher</b><code>&lt;ThemeSwitcher target /&gt;</code><span>[data-theme="light"]</span></div>
+    <div class="demo"><span class="seg"><button class="active">Dark</button><button>Light</button></span></div>
+    <div class="id"><b>Icon</b><code>&lt;Icon name size /&gt;</code><span>.icon — 14 noms, trait 1.4</span></div>
+    <div class="demo"><a class="chip" href="components/patterns.html">les 14 icônes →</a></div>
+    <div class="id"><b>Topbar / Rail / Drawer</b><code>—</code><span>.topbar .nav .rail .burger .drawer .admin-layout</span></div>
+    <div class="demo"><a class="chip" href="components/navigation.html">voir Navigation →</a></div>
+    <div class="id"><b>Panel / Empty / Dropzone</b><code>—</code><span>.panel .empty .dropzone .hairline .meta-grid</span></div>
+    <div class="demo"><a class="chip" href="components/surfaces.html">voir Surfaces →</a></div>
+    <div class="id"><b>Uptime</b><code>—</code><span>.uptime span .warn .bad .na</span></div>
+    <div class="demo" style="flex:1"><span class="uptime" style="flex:1;max-width:260px"><span></span><span></span><span></span><span class="warn"></span><span></span><span></span><span></span><span></span><span class="bad"></span><span></span><span></span><span></span></span></div>
+  </div>
+</div>
+<footer class="footer">theogalh.dev · catalogue — montage React : <span class="mono">const { Button } = window.TheogalhDevDesignSystem_32f2b5</span></footer>
+</body>
+</html>

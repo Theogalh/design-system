@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Admin — Apps" subtitle="App settings, OAuth client, redirect URIs" viewport="1360x1150" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TheoAPI — Admin · Apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="#">theoapi<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#">Apps</a>
+    <a href="#" class="active">Admin</a>
+    <a href="#">Profile</a>
+    <button class="logout">Logout</button>
+  </nav>
+</header>
+<div class="admin-wrap">
+  <a class="admin-back" href="#">← Back to app</a>
+  <div class="admin-layout">
+    <nav class="rail">
+      <div class="rail-group">
+        <span class="rail-title">Registry</span>
+        <a href="#" class="active">Apps</a>
+        <a href="#" class="sub">All apps</a>
+        <a href="#" class="sub">Create app</a>
+        <a href="#">Roles</a>
+        <a href="#">Users</a>
+        <a href="#">Audit</a>
+      </div>
+    </nav>
+    <div>
+      <div class="page-head">
+        <h1 class="display">Apps</h1>
+        <p class="sub">Manage application settings, roles and SSO.</p>
+      </div>
+      <div class="split">
+        <div class="row-list">
+          <button class="row-card active">
+            <span class="applogo">J</span>
+            <span class="row-main">
+              <span class="row-title">Jellyfin</span><br />
+              <span class="row-sub">app:jellyfin</span>
+            </span>
+          </button>
+          <button class="row-card">
+            <span class="applogo">Y</span>
+            <span class="row-main">
+              <span class="row-title">ytp</span><br />
+              <span class="row-sub">app:ytp</span>
+            </span>
+          </button>
+          <button class="row-card">
+            <span class="applogo">S</span>
+            <span class="row-main">
+              <span class="row-title">screen</span><br />
+              <span class="row-sub">app:screen</span>
+            </span>
+          </button>
+        </div>
+        <div class="panel">
+          <div class="section">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+              <div style="display:flex;gap:14px;align-items:center">
+                <span class="applogo" style="width:44px;height:44px;font-size:18px">J</span>
+                <div>
+                  <h2 class="section-title" style="font-family:var(--font-display);font-size:20px;margin-bottom:2px">Jellyfin</h2>
+                  <span class="row-sub">jellyfin.theogalh.dev</span>
+                </div>
+              </div>
+              <span class="stamp ok">Active</span>
+            </div>
+          </div>
+
+          <hr class="hairline" />
+
+          <div class="section">
+            <p class="eyebrow">Settings</p>
+            <div class="form" style="grid-template-columns:1fr 1fr">
+              <div class="field">
+                <label class="field-label" for="aa-name">Name</label>
+                <input id="aa-name" value="Jellyfin" />
+              </div>
+              <div class="field">
+                <label class="field-label" for="aa-slug">Slug</label>
+                <input id="aa-slug" value="jellyfin" />
+              </div>
+              <div class="field" style="grid-column:1/-1">
+                <label class="field-label" for="aa-desc">Description</label>
+                <input id="aa-desc" value="Movies, shows and music on your own server." />
+              </div>
+              <div class="field">
+                <label class="field-label" for="aa-url">URL</label>
+                <input id="aa-url" value="https://jellyfin.theogalh.dev" />
+              </div>
+              <div class="field">
+                <label class="field-label" for="aa-logo">Logo URL</label>
+                <input id="aa-logo" placeholder="https://" />
+              </div>
+              <div style="grid-column:1/-1"><button class="btn btn-primary">Save changes</button></div>
+            </div>
+          </div>
+
+          <hr class="hairline" />
+
+          <div class="section">
+            <p class="eyebrow">OAuth client — SSO</p>
+            <div class="meta-grid" style="grid-template-columns:1fr 1fr">
+              <div class="meta-row"><span class="meta-label">Client ID</span><span class="meta-value"><span class="plate">client_1yq9d41f</span></span></div>
+              <div class="meta-row"><span class="meta-label">Type</span><span class="meta-value">Confidential · PKCE</span></div>
+            </div>
+            <div class="row-list" style="margin-top:14px">
+              <div class="row-card" style="cursor:default">
+                <span class="row-main"><span class="row-sub" style="font-size:13px">https://jellyfin.theogalh.dev/sso/callback</span></span>
+                <button class="btn btn-ghost btn-sm">Remove</button>
+              </div>
+            </div>
+            <div class="form" style="grid-template-columns:1fr auto;align-items:end;margin-top:14px">
+              <div class="field">
+                <label class="field-label" for="aa-redirect">Add redirect URI</label>
+                <input id="aa-redirect" placeholder="https://example.com/callback" />
+              </div>
+              <button class="btn btn-ghost">Add</button>
+            </div>
+          </div>
+
+          <hr class="hairline" />
+
+          <div class="section">
+            <p class="eyebrow" style="color:var(--bad)">Danger zone</p>
+            <button class="btn btn-danger">Deactivate app</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

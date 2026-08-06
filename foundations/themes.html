@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Themes" subtitle="Dark par défaut, light via data-theme" viewport="940x760" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Themes</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .theme-demo { border: 1px solid var(--line-soft); border-radius: var(--r-lg); overflow: hidden; }
+  .theme-pane { padding: 24px; background: var(--ink); color: var(--text); }
+  .theme-pane .label { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin: 0 0 14px; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · foundations</p>
+  <h1 class="display">Themes</h1>
+  <p class="sub">Dark is the default. Add <span class="mono">data-theme="light"</span> on any container — every token flips, nothing else changes.</p>
+  <hr class="hairline" />
+  <div class="theme-demo">
+    <div class="theme-pane">
+      <p class="label">dark — default</p>
+      <div class="action-row">
+        <button class="btn btn-primary">Analyser</button>
+        <button class="btn btn-ghost">Cancel</button>
+        <span class="stamp ok">verified</span>
+        <span class="chip accent">API</span>
+      </div>
+      <div class="stats-grid" style="margin-top:16px;max-width:420px">
+        <div class="stat-card"><span class="stat-label">Requests</span><span class="stat-value">12,480</span><span class="stat-delta up">▲ 8.2%</span></div>
+        <div class="stat-card"><span class="stat-label">Errors</span><span class="stat-value">0.4%</span><span class="stat-delta down">▼ 12%</span></div>
+      </div>
+    </div>
+    <div class="theme-pane" data-theme="light">
+      <p class="label">light — data-theme="light"</p>
+      <div class="action-row">
+        <button class="btn btn-primary">Analyser</button>
+        <button class="btn btn-ghost">Cancel</button>
+        <span class="stamp ok">verified</span>
+        <span class="chip accent">API</span>
+      </div>
+      <div class="stats-grid" style="margin-top:16px;max-width:420px">
+        <div class="stat-card"><span class="stat-label">Requests</span><span class="stat-value">12,480</span><span class="stat-delta up">▲ 8.2%</span></div>
+        <div class="stat-card"><span class="stat-label">Errors</span><span class="stat-value">0.4%</span><span class="stat-delta down">▼ 12%</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

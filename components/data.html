@@ -1,0 +1,87 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Data & status" subtitle="Stamps, meta grid, ledger, empty states" viewport="940x1050" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data & status</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/logo.svg">
+</head>
+<body>
+<style>
+  .wrap { max-width: 860px; margin: 0 auto; padding: 40px; }
+  .block { padding: 18px 0 24px; border-bottom: 1px solid var(--line-soft); }
+  .block:last-child { border-bottom: none; }
+</style>
+<div class="wrap">
+  <p class="eyebrow">theogalh.dev · components</p>
+  <h1 class="display">Data &amp; status</h1>
+  <p class="sub">Stamps carry state, meta grids describe, the ledger records. All of it in mono.</p>
+
+  <hr class="hairline" />
+
+  <div class="block">
+    <h2 class="section-title">Stamps</h2>
+    <div class="action-row">
+      <span class="stamp ok">Verified</span>
+      <span class="stamp ok">Active</span>
+      <span class="stamp warn">Reset required</span>
+      <span class="stamp warn">Unverified</span>
+      <span class="stamp danger">Deleted</span>
+      <span class="stamp">Disabled</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Meta grid</h2>
+    <div class="meta-grid" style="max-width:420px">
+      <div class="meta-row">
+        <span class="meta-label">User ID</span>
+        <span class="meta-value"><span class="plate">user:8f3d21c7-4b0e</span></span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Email</span>
+        <span class="meta-value">theogalh.dev@gmail.com</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Access</span>
+        <span class="meta-value">super_admin</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Ledger</h2>
+    <table class="ledger">
+      <thead>
+        <tr><th>Time</th><th>Actor</th><th>Action</th><th>Target</th><th>App</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="t">14:02:11</td><td>theogalh</td><td>role.assign</td><td>marie → media_admin</td><td>jellyfin</td></tr>
+        <tr><td class="t">13:47:52</td><td>theogalh</td><td>oauth.client.create</td><td>client_1yq9…d41f</td><td>ytp</td></tr>
+        <tr><td class="t">11:20:03</td><td>system</td><td>user.force_reset</td><td>user:2c11…9a04</td><td>platform</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Empty state</h2>
+    <div class="empty" style="max-width:520px">
+      <span class="muted">No screenshots yet.</span>
+      <button class="btn btn-primary">Upload one</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="section-title">Working / error text</h2>
+    <p style="display:flex;align-items:center;gap:9px;margin:0 0 8px"><span class="dot pulse"></span><span class="muted">Loading your session…</span></p>
+    <p class="muted" style="color:var(--bad);margin:0">Login failed — check your email and password.</p>
+  </div>
+</div>
+
+</body>
+</html>

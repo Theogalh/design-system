@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Settings" description="Page réglages : formulaire par sections, switches, zone dangereuse" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div>
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav">
+    <a href="#">Dashboard</a>
+    <a href="#" class="active">Settings</a>
+    <button class="logout">Log out</button>
+  </nav>
+</header>
+<div class="admin-wrap" style="max-width:760px">
+  <nav class="crumbs" style="margin-bottom:20px"><a href="#">Dashboard</a><span class="sep">/</span><span class="current">Settings</span></nav>
+  <div class="page-head anim-rise">
+    <p class="eyebrow">account · settings</p>
+    <h1 class="display">Settings</h1>
+    <p class="sub">Profile, notifications and the things you shouldn't touch.</p>
+  </div>
+  <div class="panel anim-rise section">
+    <h2 class="section-title">Profile</h2>
+    <div class="form" style="max-width:380px">
+      <div class="field">
+        <label class="field-label" for="s-name">Display name</label>
+        <input id="s-name" type="text" value="Theo" />
+      </div>
+      <div class="field">
+        <label class="field-label" for="s-email">Email</label>
+        <input id="s-email" type="email" value="theo@theogalh.dev" />
+      </div>
+      <div class="action-row"><button class="btn btn-primary">Save changes</button></div>
+    </div>
+  </div>
+  <div class="panel anim-rise section">
+    <h2 class="section-title">Notifications</h2>
+    <div style="display:grid;gap:14px">
+      <label class="switch"><input type="checkbox" checked /><span class="track"></span><span>Email me when an upload finishes</span></label>
+      <label class="switch"><input type="checkbox" /><span class="track"></span><span>Weekly usage digest</span></label>
+      <label class="switch"><input type="checkbox" checked /><span class="track"></span><span>Security alerts (new login, token created)</span></label>
+    </div>
+  </div>
+  <div class="panel anim-rise section" style="border-color:rgba(240,117,103,0.35)">
+    <h2 class="section-title" style="color:var(--bad)">Danger zone</h2>
+    <p class="muted" style="margin:0 0 14px">Deleting your account removes every app grant and cannot be undone.</p>
+    <div class="action-row">
+      <button class="btn btn-ghost">Export my data</button>
+      <button class="btn btn-danger">Delete account</button>
+    </div>
+  </div>
+</div>
+<footer class="footer">theogalh.dev</footer>
+</div>
+</x-dc>
+</body>
+</html>

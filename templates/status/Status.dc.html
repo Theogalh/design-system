@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Status page" description="Page publique d'uptime : état global, barres 90 jours, incidents" -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div>
+<header class="topbar">
+  <a class="wordmark" href="#">theogalh<span class="dot"></span></a>
+  <nav class="nav"><a href="#">Home</a><a href="#" class="active">Status</a></nav>
+</header>
+<main style="max-width:760px;margin:0 auto;padding:48px 40px 60px">
+  <div class="panel anim-rise" style="display:flex;align-items:center;gap:14px;border-color:rgba(91,201,155,0.35);margin-bottom:28px">
+    <span class="dot ok pulse" style="width:10px;height:10px"></span>
+    <div>
+      <p style="margin:0;font-weight:600;font-size:16px">All systems operational</p>
+      <p class="muted" style="margin:0;font-size:13px">Updated 2026-08-06 18:45 UTC · checked every 60s</p>
+    </div>
+  </div>
+  <div style="display:grid;gap:16px">
+    <div class="panel">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px">
+        <h2 class="section-title" style="margin:0">theoapi</h2>
+        <span class="stamp ok">operational</span>
+        <span class="muted" style="margin-left:auto;font-family:var(--font-mono);font-size:12px">99.98% · 90d</span>
+      </div>
+      <div class="uptime"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="warn"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="bad"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="panel">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px">
+        <h2 class="section-title" style="margin:0">ytp</h2>
+        <span class="stamp ok">operational</span>
+        <span class="muted" style="margin-left:auto;font-family:var(--font-mono);font-size:12px">100% · 90d</span>
+      </div>
+      <div class="uptime"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <hr class="hairline" style="margin:32px 0" />
+  <h2 class="section-title">Past incidents</h2>
+  <div class="meta-grid" style="gap:18px">
+    <div class="meta-row">
+      <span class="meta-label">2026-07-22 · resolved in 18 min</span>
+      <span class="meta-value">theoapi — elevated 5xx on /v1/videos. Cause: disk full on worker-2. Fixed and alerting added.</span>
+    </div>
+    <div class="meta-row">
+      <span class="meta-label">2026-06-30 · resolved in 42 min</span>
+      <span class="meta-value">Degraded upload speed on screen. Cause: upstream provider maintenance.</span>
+    </div>
+  </div>
+</main>
+<footer class="footer">theogalh.dev · status</footer>
+</div>
+</x-dc>
+</body>
+</html>
